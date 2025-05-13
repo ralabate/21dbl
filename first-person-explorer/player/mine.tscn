@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://brnxv2baowehj"]
+
+[ext_resource type="Script" uid="uid://bs6f774rygn3c" path="res://player/mine.gd" id="1_iuis7"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ho4jl"]
+radius = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iuis7"]
+shading_mode = 0
+
+[sub_resource type="TorusMesh" id="TorusMesh_i6hay"]
+material = SubResource("StandardMaterial3D_iuis7")
+inner_radius = 1.75
+outer_radius = 2.0
+rings = 8
+ring_segments = 4
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iuis7"]
+emission_shape = 6
+emission_ring_axis = Vector3(0, 1, 0)
+emission_ring_height = 1.0
+emission_ring_radius = 2.0
+emission_ring_inner_radius = 1.75
+emission_ring_cone_angle = 90.0
+direction = Vector3(0, 1, 0)
+spread = 0.0
+initial_velocity_min = 5.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6hay"]
+shading_mode = 0
+
+[sub_resource type="QuadMesh" id="QuadMesh_i213m"]
+material = SubResource("StandardMaterial3D_i6hay")
+size = Vector2(0.2, 0.2)
+
+[node name="Mine" type="Area3D"]
+collision_layer = 2
+collision_mask = 14
+script = ExtResource("1_iuis7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("CylinderShape3D_ho4jl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("TorusMesh_i6hay")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+amount = 16
+lifetime = 0.1
+process_material = SubResource("ParticleProcessMaterial_iuis7")
+draw_pass_1 = SubResource("QuadMesh_i213m")

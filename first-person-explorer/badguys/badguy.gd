@@ -1,0 +1,102 @@
+extends CharacterBody3D
+class_name Badguy
+
+
+signal death(location: Vector3)
+
+@export var damage_overlay: ShaderMaterial
+@export var movement_speed: float = 50.0
+@export var attack_damage: int = 1
+@onready var detection_area: Area3D = %DetectionArea
+@onready var player_damage_area: Area3D = %PlayerDamageArea
+@onready var health_component: HealthComponent = %HealthComponent
+@onready var navigation_component: NavigationComponent = %NavigationComponent
+@onready var fsm_component: FSMComponent = %FSMComponent
+@onready var animated_sprite: AnimatedSprite3D = %AnimatedSprite3D
+
+var is_moving = false
+var movement_direction: Vector3
+var player: Node3D
+
+
+func _ready():
+	player_damage_area.body_entered.connect(_on_body_entered_attack_area)
+	detection_area.body_entered.connect(_on_body_entered_detection_area)
+	#detection_area.body_exited.connect(_on_body_exited_detection_area)
+
+	health_component.damage_received.connect(_on_damage_received)
+	health_component.death.connect(_on_death)
+
+	navigation_component.navigation_started.connect(_on_navigation_started)
+	navigation_component.navigation_stopped.connect(_on_navigation_stopped)
+	navigation_component.next_position.connect(_on_navigation_position)
+
+	fsm_component.transitioned.connect(_on_fsm_transitioned_state)
+	fsm_component.transition("BadguyIdleState")
+
+	# HACK: Let's find another way to do this...
+	player = get_tree().get_first_node_in_group("player")
+
+
+func _physics_process(delta):
+	if is_moving:
+		velocity = movement_direction * movement_speed * delta
+
+	look_at(transform.origin - player.transform.basis.z)
+	move_and_slide()
+
+
+func _on_body_entered_attack_area(body: Node3D) -> void:
+	if body.has_node("HealthComponent"):
+		var health_component = body.get_node("HealthComponent") as HealthComponent
+		health_component.damage(attack_damage)
+
+
+func _on_body_entered_detection_area(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		fsm_component.transition("BadguyChaseState")
+
+
+func _on_body_exited_detection_area(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		fsm_component.transition("BadguyIdleState")
+
+
+func _on_damage_received(amount: int) -> void:
+	# HACK: For now...
+	if health_component.current_health > 0:
+		fsm_component.transition("BadguyHurtState")
+
+
+func _on_death() -> void:
+	fsm_component.transition("BadguyDeathState")
+
+
+func _on_navigation_started(target: Node3D) -> void:
+	is_moving = true
+
+
+func _on_navigation_stopped() -> void:
+	is_moving = false
+	velocity = Vector3.ZERO
+
+
+func _on_navigation_position(position: Vector3) -> void:
+	movement_direction = global_position.direction_to(position)
+
+
+func _on_fsm_transitioned_state(to: String) -> void:
+	match to:
+		"BadguyIdleState":
+			animated_sprite.play("idle")
+		"BadguyChaseState":
+			animated_sprite.play("chase")
+		"BadguyAttackState":
+			animated_sprite.play("attack")
+		"BadguyHurtState":
+			animated_sprite.play("hurt")
+		"BadguyDeathState":
+			animated_sprite.play("death")
+			await animated_sprite.animation_finished
+			death.emit(position)
+			queue_free()

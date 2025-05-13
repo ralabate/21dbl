@@ -1,0 +1,196 @@
+[gd_scene load_steps=29 format=3 uid="uid://dysqmwq3wem2k"]
+
+[ext_resource type="Script" uid="uid://clhircl18kdhh" path="res://badguys/badguy.gd" id="1_apgvv"]
+[ext_resource type="Material" uid="uid://ci70lplv4aah0" path="res://badguys/damage_overlay.tres" id="2_nnro2"]
+[ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="3_0b8a1"]
+[ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/fsm_component.gd" id="4_atq5v"]
+[ext_resource type="Script" uid="uid://cuiwxj3wnoqag" path="res://common/components/navigation_component.gd" id="4_s5srx"]
+[ext_resource type="Texture2D" uid="uid://c483nlost4i2e" path="res://badguys/images/green-alien/green-alien-walk-0.png" id="5_atq5v"]
+[ext_resource type="Script" uid="uid://c3mha4eajluii" path="res://badguys/states/badguy_idle_state.gd" id="5_i283h"]
+[ext_resource type="Script" uid="uid://db57k26wi7ltc" path="res://common/components/melee_attack_component.gd" id="5_pmj3k"]
+[ext_resource type="Script" uid="uid://cdsndtjjy64gx" path="res://badguys/states/badguy_chase_state.gd" id="6_gny1c"]
+[ext_resource type="Texture2D" uid="uid://d18qtw0764qth" path="res://badguys/images/green-alien/green-alien-walk-1.png" id="6_i283h"]
+[ext_resource type="Texture2D" uid="uid://bq6ftkc1ahg52" path="res://badguys/images/green-alien/green-alien-walk-2.png" id="7_gny1c"]
+[ext_resource type="Texture2D" uid="uid://dryakn3xx2pru" path="res://badguys/images/green-alien/green-alien-death-0.png" id="8_kmnu5"]
+[ext_resource type="Script" uid="uid://mgr8rmq8nlia" path="res://badguys/states/badguy_death_state.gd" id="8_rcwso"]
+[ext_resource type="Texture2D" uid="uid://blrx6hatd6cxn" path="res://badguys/images/green-alien/green-alien-walk-3.png" id="8_s5srx"]
+[ext_resource type="Script" uid="uid://bbx03qgt7jwev" path="res://badguys/states/badguy_attack_state.gd" id="9_cvph2"]
+[ext_resource type="Texture2D" uid="uid://cl0uopuqg3qpk" path="res://badguys/images/green-alien/green-alien-death-1.png" id="9_rcwso"]
+[ext_resource type="Texture2D" uid="uid://djrw7ptnll4u5" path="res://badguys/images/green-alien/green-alien-death-2.png" id="10_pmj3k"]
+[ext_resource type="Texture2D" uid="uid://u50uchccs807" path="res://badguys/images/green-alien/green-alien-death-3.png" id="11_cvph2"]
+[ext_resource type="Texture2D" uid="uid://c6qcyjtc7ronv" path="res://badguys/images/green-alien/green-alien-death-4.png" id="12_7ovs8"]
+[ext_resource type="Texture2D" uid="uid://4ehk77apa6e2" path="res://badguys/images/green-alien/green-alien-death-5.png" id="13_ly33v"]
+[ext_resource type="Texture2D" uid="uid://cxaak6b76brgq" path="res://badguys/images/green-alien/green-alien-melee-0.png" id="21_x8gbm"]
+[ext_resource type="Texture2D" uid="uid://cm8036v8mmr66" path="res://badguys/images/green-alien/green-alien-melee-1.png" id="22_jl7e4"]
+[ext_resource type="Texture2D" uid="uid://d2v7jdrgjethv" path="res://badguys/images/green-alien/green-alien-melee-2.png" id="23_8qtot"]
+[ext_resource type="Script" uid="uid://dmrpfrb334jim" path="res://badguys/states/badguy_hurt_state.gd" id="24_jl7e4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bug4s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_221m0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jl7e4"]
+points = PackedVector3Array(0, 0, 0, 3, 0, 9, -3, 0, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwje0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_x8gbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_jl7e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8qtot")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_atq5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i283h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_gny1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s5srx")
+}],
+"loop": true,
+"name": &"chase",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kmnu5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rcwso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pmj3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cvph2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7ovs8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ly33v")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_kmnu5")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_atq5v")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="WalkingBadguy" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+script = ExtResource("1_apgvv")
+damage_overlay = ExtResource("2_nnro2")
+movement_speed = 200.0
+attack_damage = 30
+
+[node name="HealthComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_0b8a1")
+MAX_HEALTH = 10
+metadata/_custom_type_script = "uid://bund4vdf4u4yo"
+
+[node name="NavigationComponent" type="Node" parent="." node_paths=PackedStringArray("navigation_agent")]
+unique_name_in_owner = true
+script = ExtResource("4_s5srx")
+navigation_agent = NodePath("../NavigationAgent3D")
+metadata/_custom_type_script = "uid://cuiwxj3wnoqag"
+
+[node name="MeleeAttackComponent" type="Node" parent="." node_paths=PackedStringArray("attack_area")]
+unique_name_in_owner = true
+script = ExtResource("5_pmj3k")
+attack_area = NodePath("../PlayerDamageArea")
+metadata/_custom_type_script = "uid://db57k26wi7ltc"
+
+[node name="FSMComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_atq5v")
+metadata/_custom_type_script = "uid://d3w1w02heo866"
+
+[node name="BadguyIdleState" type="Node" parent="FSMComponent"]
+script = ExtResource("5_i283h")
+metadata/_custom_type_script = "uid://c3mha4eajluii"
+
+[node name="BadguyChaseState" type="Node" parent="FSMComponent" node_paths=PackedStringArray("navigation_component")]
+script = ExtResource("6_gny1c")
+navigation_component = NodePath("../../NavigationComponent")
+attack_distance = 1.5
+metadata/_custom_type_script = "uid://cdsndtjjy64gx"
+
+[node name="BadguyAttackState" type="Node" parent="FSMComponent" node_paths=PackedStringArray("attack_component")]
+script = ExtResource("9_cvph2")
+attack_component = NodePath("../../MeleeAttackComponent")
+metadata/_custom_type_script = "uid://bbx03qgt7jwev"
+
+[node name="BadguyHurtState" type="Node" parent="FSMComponent"]
+script = ExtResource("24_jl7e4")
+hit_stun_length = 0.25
+metadata/_custom_type_script = "uid://dmrpfrb334jim"
+
+[node name="BadguyDeathState" type="Node" parent="FSMComponent"]
+script = ExtResource("8_rcwso")
+metadata/_custom_type_script = "uid://mgr8rmq8nlia"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_bug4s")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+
+[node name="PlayerDamageArea" type="Area3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDamageArea"]
+shape = SubResource("SphereShape3D_221m0")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="DetectionArea" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea"]
+shape = SubResource("ConvexPolygonShape3D_jl7e4")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+pixel_size = 0.025
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_qwje0")
+animation = &"attack"
