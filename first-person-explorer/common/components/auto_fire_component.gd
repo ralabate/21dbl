@@ -6,7 +6,7 @@ signal node_instantiated(badguy: Node3D, location: Vector3, direction: Vector3)
 
 @export var TIME_BETWEEN_SHOTS = 1.0
 
-var bullet_template = preload("res://badguys/badguy_bullet.tscn")
+@export var bullet_template: PackedScene
 var firing_rate_timer: Timer
 
 
