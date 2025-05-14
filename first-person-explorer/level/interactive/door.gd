@@ -1,7 +1,7 @@
 extends Area3D
 
 
-@export var required_key: String
+@export var required_key: DoorKey.Type = DoorKey.Type.NONE
 @export var opening_speed: float = 1.0
 
 @onready var animation_player = %AnimationPlayer
@@ -20,7 +20,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node3D) -> void:
 	var can_open = false
 
-	if required_key.is_empty():
+	if required_key == DoorKey.Type.NONE:
 		can_open = true
 	elif body.has_node("KeyInventoryComponent"):
 		var key_inventory = body.get_node("KeyInventoryComponent") as KeyInventoryComponent

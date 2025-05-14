@@ -8,9 +8,13 @@ extends CharacterBody3D
 @onready var health_component: HealthComponent = %HealthComponent
 @onready var trigger_fire_component: TriggerFireComponent = %TriggerFireComponent
 @onready var ability_inventory: AbilityInventory = %AbilityInventory
+@onready var key_inventory_component: KeyInventoryComponent = %KeyInventoryComponent
 @onready var weapon_sprite: AnimatedSprite2D = %WeaponSprite
+
+# TODO: Move UI stuff out of here.
 @onready var hurt_flash: ColorRect = %HurtFlashRect
 @onready var health_bar: ProgressBar = %HealthBar
+@onready var key_inventory_container: HBoxContainer = %KeyInventoryContainer
 
 
 func _ready() -> void:
@@ -21,11 +25,14 @@ func _ready() -> void:
 	trigger_fire_component.can_fire = true
 	trigger_fire_component.ability_template = ability_inventory.get_current_ability()
 	ability_inventory.selected_ability.connect(_on_ability_selected)
+	key_inventory_component.key_acquired.connect(_on_key_acquired)
 
+	# TODO: Move UI stuff out of here.
 	hurt_flash.visible = false
 	weapon_sprite.play("idle")
-
 	update_health_bar_value()
+	for key_icon in key_inventory_container.get_children():
+		key_icon.visible = false
 
 
 func _input(event: InputEvent) -> void:
@@ -78,3 +85,18 @@ func _on_weapon_fired() -> void:
 
 func _on_ability_selected(scene: PackedScene) -> void:
 	trigger_fire_component.ability_template = scene
+
+
+func _on_key_acquired(key: DoorKey.Type) -> void:
+	var node_name: String
+	match key:
+		DoorKey.Type.RED:
+			node_name = "RedKeyIcon"
+		DoorKey.Type.YELLOW:
+			node_name = "YellowKeyIcon"
+		DoorKey.Type.BLUE:
+			node_name = "BlueKeyIcon"
+			
+	var key_icon = key_inventory_container.get_node(node_name)
+	if key_icon:
+		key_icon.visible = true

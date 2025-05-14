@@ -1,13 +1,30 @@
-extends Area3D
+class_name DoorKey extends Area3D
 
 
-@export var type: String
+enum Type {
+	RED,
+	YELLOW,
+	BLUE,
+	NONE = -1,
+}
+
+@export var type: Type = Type.NONE
+
+@onready var sprite: Sprite3D = %Sprite3D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	assert(not type.is_empty(), "Type not assigned!")
+	assert(type != Type.NONE, "Type not assigned!")
 	body_entered.connect(_on_body_entered)
+	
+	match type:
+		DoorKey.Type.RED:
+			sprite.texture = load("res://level/images/keys/red-keycard.png")
+		DoorKey.Type.YELLOW:
+			sprite.texture = load("res://level/images/keys/yellow-keycard.png")
+		DoorKey.Type.BLUE:
+			sprite.texture = load("res://level/images/keys/blue-keycard.png")
 
 
 func _on_body_entered(body: Node3D) -> void:

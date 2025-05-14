@@ -1,23 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://b178sxgv7g7lk"]
 
 [ext_resource type="Script" uid="uid://6my74ex8112r" path="res://level/interactive/key.gd" id="1_up4cr"]
-[ext_resource type="Texture2D" uid="uid://c6citgotws0lu" path="res://level/images/yellow-keycard.png" id="2_ebhk6"]
+[ext_resource type="Texture2D" uid="uid://dw1ehubdl1cp" path="res://level/images/keys/none-keycard.png" id="2_5rxqu"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7ltq3"]
 
 [node name="Key" type="Area3D"]
+collision_mask = 3
 script = ExtResource("1_up4cr")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_7ltq3")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
+unique_name_in_owner = true
 pixel_size = 0.025
 billboard = 1
 shaded = true
 double_sided = false
 texture_filter = 0
-texture = ExtResource("2_ebhk6")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-light_color = Color(1, 1, 0, 1)
+texture = ExtResource("2_5rxqu")
