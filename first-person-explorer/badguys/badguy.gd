@@ -20,6 +20,8 @@ var player: Node3D
 
 
 func _ready():
+	add_to_group("badguys")
+
 	player_damage_area.body_entered.connect(_on_body_entered_attack_area)
 	detection_area.body_entered.connect(_on_body_entered_detection_area)
 	#detection_area.body_exited.connect(_on_body_exited_detection_area)
@@ -54,6 +56,8 @@ func _on_body_entered_attack_area(body: Node3D) -> void:
 
 func _on_body_entered_detection_area(body: Node3D) -> void:
 	if body.is_in_group("player"):
+		if navigation_component.target == null:
+			navigation_component.target = body
 		fsm_component.transition("BadguyChaseState")
 
 

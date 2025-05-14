@@ -12,18 +12,16 @@ signal next_position(position: Vector3)
 var target: Node3D
 
 
-func start_navigation(target: Node3D) -> void:
+func start_navigation() -> void:
 	Log.info("[%s] Starting navigation to target: [%s]" %
 		[get_parent().name, target])
 	
-	self.target = target
 	navigation_agent.target_position = target.global_position
 	navigation_started.emit(self.target)
 
 
 func stop_navigation() -> void:
 	Log.info("[%s] Stopped navigation" % get_parent().name)
-	self.target = null
 	navigation_stopped.emit()
 
 

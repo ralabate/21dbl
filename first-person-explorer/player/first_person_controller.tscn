@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://r0agos3dx780"]
+[gd_scene load_steps=19 format=3 uid="uid://r0agos3dx780"]
 
 [ext_resource type="Script" uid="uid://docgf5x4voevf" path="res://player/first_person_controller.gd" id="1_n4j6h"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_cehq5"]
@@ -6,7 +6,10 @@
 [ext_resource type="Script" uid="uid://dt1p48op4tcvu" path="res://common/components/trigger_fire_component.gd" id="3_aio67"]
 [ext_resource type="Texture2D" uid="uid://dty6l6qg7fkh5" path="res://player/weapons/images/pistol-fire-0.png" id="5_dprww"]
 [ext_resource type="Script" uid="uid://bpdw05fio7u8e" path="res://common/components/key_inventory_component.gd" id="5_hynqe"]
+[ext_resource type="PackedScene" uid="uid://ddrgx7hx1ypm1" path="res://player/weapons/bullet.tscn" id="5_vtoyx"]
+[ext_resource type="PackedScene" uid="uid://dj3m0gkysy4q1" path="res://player/weapons/decoy.tscn" id="6_72dxh"]
 [ext_resource type="Texture2D" uid="uid://cvs3aws5vq44a" path="res://player/weapons/images/pistol-fire-1.png" id="6_hynqe"]
+[ext_resource type="PackedScene" uid="uid://brnxv2baowehj" path="res://player/weapons/mine.tscn" id="7_bs386"]
 [ext_resource type="Texture2D" uid="uid://dntqhg0mkms44" path="res://player/weapons/images/pistol-fire-2.png" id="7_p4yk0"]
 [ext_resource type="Texture2D" uid="uid://prwc0t0inasf" path="res://player/weapons/images/pistol-fire-3.png" id="8_nst1k"]
 [ext_resource type="Texture2D" uid="uid://drbtagputumbv" path="res://player/weapons/images/pistol-fire-4.png" id="9_rvvfq"]
@@ -68,6 +71,7 @@ metadata/_custom_type_script = "uid://dt1p48op4tcvu"
 [node name="AbilityInventory" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_iatk6")
+abilities = Array[PackedScene]([ExtResource("5_vtoyx"), ExtResource("6_72dxh"), ExtResource("7_bs386")])
 metadata/_custom_type_script = "uid://d0dbewhb72jh2"
 
 [node name="KeyInventoryComponent" type="Node" parent="."]
@@ -157,3 +161,10 @@ texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("13_ki3sp")
+
+[node name="AbilityLabel" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2

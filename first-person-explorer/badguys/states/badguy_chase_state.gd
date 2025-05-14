@@ -8,11 +8,7 @@ class_name BadguyChaseState
 
 func enter() -> void:
 	super.enter()
-
-	var target = get_tree().get_first_node_in_group("player")
-	assert(target != null, "The player does not exist!")
-
-	navigation_component.start_navigation(target)
+	navigation_component.start_navigation()
 
 
 func exit() -> void:
@@ -25,7 +21,3 @@ func update(delta: float) -> void:
 		transition("BadguyAttackState")
 	else:
 		navigation_component.update_target_position()
-
-
-func _on_chase_timer_timeout() -> void:
-	navigation_component.update_target_position()

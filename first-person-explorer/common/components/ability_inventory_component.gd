@@ -5,11 +5,7 @@ signal node_instantiated(node: Node3D, location: Vector3, direction: Vector3)
 signal selected_ability(scene: PackedScene)
 
 
-var abilities = [
-	preload("res://player/bullet.tscn"),
-	preload("res://player/mine.tscn"),
-	preload("res://player/decoy.tscn"),
-]
+@export var abilities: Array[PackedScene]
 
 var current_ability = 0
 

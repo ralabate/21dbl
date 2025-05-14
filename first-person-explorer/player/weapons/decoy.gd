@@ -2,10 +2,8 @@ extends Area3D
 
 
 signal done(affected_list: Array[Node3D])
-signal node_instantiated(badguy: Node3D, location: Vector3, direction: Vector3)
 
-var bullet_template = preload("res://player/bullet.tscn")
-var baduy_list: Array[Node3D] = []
+var badguy_list: Array[Badguy] = []
 
 
 # Called when the node enters the scene tree for the first time.
@@ -14,23 +12,14 @@ func _ready() -> void:
 
 
 func finished() -> void:
-	done.emit(baduy_list)
+	for badguy in badguy_list:
+		if badguy and not badguy.is_queued_for_deletion():
+			badguy.navigation_component.target = get_tree().get_first_node_in_group("player")
 	queue_free()
 
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.is_in_group("badguys"):
-		body.target = self
-		baduy_list.append(body)
-
-
-func _on_player_spawned_bullet(
-	bullet: Node3D,
-	direction: Vector3,
-	location: Vector3
-) -> void:
-	node_instantiated.emit(
-		bullet_template.instantiate(),
-		position,
-		direction
-	)
+	if body is Badguy:
+		var badguy = body as Badguy
+		badguy.navigation_component.target = self
+		badguy_list.append(badguy)

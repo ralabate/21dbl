@@ -34,6 +34,8 @@ func _ready() -> void:
 	for key_icon in key_inventory_container.get_children():
 		key_icon.visible = false
 
+	$HUD/AbilityLabel.text = trigger_fire_component.ability_template.resource_path
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -85,6 +87,8 @@ func _on_weapon_fired() -> void:
 
 func _on_ability_selected(scene: PackedScene) -> void:
 	trigger_fire_component.ability_template = scene
+	$HUD/AbilityLabel.text = trigger_fire_component.ability_template.resource_path
+
 
 
 func _on_key_acquired(key: DoorKey.Type) -> void:
