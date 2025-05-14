@@ -7,6 +7,8 @@ extends Area3D
 @onready var animation_player = %AnimationPlayer
 
 var is_open: bool
+var body_list: Array[Node3D]
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +20,9 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
+	if is_open:
+		return
+
 	var can_open = false
 
 	if required_key == DoorKey.Type.NONE:
@@ -30,9 +35,12 @@ func _on_body_entered(body: Node3D) -> void:
 	if can_open:
 		animation_player.play("open")
 		is_open = true
+		body_list.append(body)
 
 
 func _on_body_exited(body: Node3D) -> void:
-	if is_open:
+	body_list.erase(body)
+
+	if is_open and body_list.is_empty():
 		animation_player.play_backwards("open")
 		is_open = false
