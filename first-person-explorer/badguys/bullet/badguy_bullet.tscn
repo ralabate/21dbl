@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://ccha1k3c1jk0d"]
 
-[ext_resource type="Script" uid="uid://cjv5dso0dv240" path="res://player/bullet.gd" id="1_wi5qy"]
+[ext_resource type="Script" uid="uid://cjv5dso0dv240" path="res://player/weapons/bullet.gd" id="1_wi5qy"]
 [ext_resource type="Material" uid="uid://c536k4wyxiue8" path="res://badguys/bullet/badguy_bullet_pm.tres" id="2_mvdyf"]
 [ext_resource type="QuadMesh" uid="uid://cfogsvxuc0ixb" path="res://badguys/bullet/badguy_bullet_dp.tres" id="3_t2q57"]
 

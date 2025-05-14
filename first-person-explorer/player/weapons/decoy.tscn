@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://dj3m0gkysy4q1"]
 
-[ext_resource type="Script" uid="uid://bn3oy5wxj5cuu" path="res://player/decoy.gd" id="1_tpm8h"]
+[ext_resource type="Script" uid="uid://bn3oy5wxj5cuu" path="res://player/weapons/decoy.gd" id="1_tpm8h"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_gevvu"]
 radius = 5.0
