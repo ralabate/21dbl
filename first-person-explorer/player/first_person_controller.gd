@@ -43,7 +43,7 @@ func _input(event: InputEvent) -> void:
 	elif event is InputEventMouseMotion:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-deg_to_rad(event.screen_relative.x * HEAD_TURNING_RATE))
-			$Camera3D.rotate_x(-deg_to_rad(event.screen_relative.y * HEAD_TURNING_RATE))
+			#$Camera3D.rotate_x(-deg_to_rad(event.screen_relative.y * HEAD_TURNING_RATE))
 			$TriggerFireComponent.direction = global_transform.basis.z
 
 
