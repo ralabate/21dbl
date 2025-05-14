@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://j3x6ditmos8p"]
+[gd_scene load_steps=14 format=3 uid="uid://j3x6ditmos8p"]
 
 [ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/first_person_controller.tscn" id="1_wg3vb"]
 [ext_resource type="PackedScene" uid="uid://dysqmwq3wem2k" path="res://badguys/walking_badguy.tscn" id="3_wg3vb"]
@@ -13,6 +13,12 @@ albedo_color = Color(1, 1, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wb01y"]
 albedo_color = Color(1, 1, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kip3e"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43je3"]
+albedo_color = Color(1, 0, 0, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_s65ib"]
 vertices = PackedVector3Array(-0.75, -0.5, -29.5, 1, -0.5, -29.5, 1.25, -0.5, -30.5, -1, -0.5, -30.5, -4.25, -0.5, -39.25, 15.5, -0.5, -33.75, 15.5, -0.5, -39.25, 15.5, -0.5, -31.5, 16.75, -0.5, -31.75, 16.75, -0.5, -33.5, 15.5, -0.5, -30.5, -4.25, -0.5, -30.5, 17.75, -0.5, -31.5, 22, -0.5, -30.5, 24.25, -0.5, -30.5, 17.75, -0.5, -33.75, 22.25, -0.5, -29.5, 24, -0.5, -29.5, 17.75, -0.5, -30.5, 28.5, -0.5, -30.5, 28.5, -0.5, -39.25, 17.75, -0.5, -39.25, -0.75, -0.5, -16.5, 1, -0.5, -16.25, 1.25, -0.5, -17.5, -1, -0.5, -17.5, -1.25, -0.5, -28.25, -2.25, -0.5, -28.25, -2.25, -0.5, -17.5, 1.25, -0.5, -28.25, 2.5, -0.5, -17.5, 2.5, -0.5, -28.25, 24.25, -0.5, -28.25, 21.75, -0.5, -28.25, 25.5, -0.5, -22.5, 27, -0.5, -17.5, 27.25, -0.5, -22.25, 25.5, -0.5, -28.25, 20.75, -0.5, -17.5, 20.75, -0.5, -28.25, 37, -0.5, -17.5, 37.25, -0.5, -22.25, 38.75, -0.5, -15, 35.75, -0.5, -14.75, 35.75, -0.5, -14, 38.75, -0.5, -13.75, 55.5, -0.5, -13.75, 55.5, -0.5, -15, 55.5, -0.5, -9.75, 38.75, -0.5, -9.75, 35.75, -0.5, -9.5, 35.75, -0.5, -8.75, 38.75, -0.5, -8.5, 55.5, -0.5, -8.5, 38.75, -0.5, -4.75, 55.5, -0.5, -4.75, 35.75, -0.5, -4.5, 35.75, -0.5, -3.75, 58.5, -0.5, -3.75, 58.5, -0.5, -4.5, 38.75, -0.5, -17.25, 58.5, -0.5, -8.75, 58.5, -0.5, -9.5, 55.5, -0.5, -22.25, 58.5, -0.5, -14, 58.5, -0.5, -14.75, -0.75, -0.5, -5.5, 1, -0.5, -5.5, 1.25, -0.5, -6.5, 4.5, -0.5, -9.75, 5.5, -0.5, -10, 5.5, -0.5, -11.75, 4.5, -0.5, -12, -1, -0.5, -6.5, -1.25, -0.5, -15.25, -4.25, -0.5, -15.25, -4.25, -0.5, -6.5, 1.25, -0.5, -15.25, 4.5, -0.5, -6.5, 4.5, -0.5, -15.25, 8.5, -0.5, -6.5, 8.75, -0.5, -5.5, 10.5, -0.5, -5.5, 10.75, -0.5, -6.5, 6.75, -0.5, -12.25, 6.75, -0.5, -9.75, 6.75, -0.5, -15.25, 23.5, -0.5, -6.5, 23.5, -0.5, -15.25, 6.75, -0.5, -6.5, 1.25, -0.5, -4.25, -1.25, -0.5, -4.25, -4.25, -0.5, 4.25, 4.5, -0.5, 4.25, -4.25, -0.5, -4.25, 4.5, -0.5, -4.25, 10.75, -0.5, -4.25, 8.25, -0.5, -4.25, 6.75, -0.5, 4.25, 15.5, -0.5, 4.25, 15.5, -0.5, -4.25, 6.75, -0.5, -4.25)
@@ -29,7 +35,13 @@ ambient_light_source = 2
 [node name="Badguys" type="Node" parent="."]
 
 [node name="BrownMutant2" parent="Badguys" instance=ExtResource("4_kip3e")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 9.6, 0, 1)
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 11.5, 0, -8.2)
+
+[node name="BrownMutant6" parent="Badguys" instance=ExtResource("4_kip3e")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 4.02331e-07, 0, -11.5)
+
+[node name="BrownMutant3" parent="Badguys" instance=ExtResource("4_kip3e")]
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 12.9, 0, -14.1)
 
 [node name="WalkingBadguy3" parent="Badguys" instance=ExtResource("3_wg3vb")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 21.7, 0, -36.8)
@@ -41,7 +53,7 @@ transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 
 transform = Transform3D(-5.96046e-08, 0, -1, 0, 1, 0, 1, 0, -5.96046e-08, 23.7, 0, -31.9)
 
 [node name="WalkingBadguy2" parent="Badguys" instance=ExtResource("3_wg3vb")]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 11.7, 0, -14.6)
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 11.9, 0, 3.2)
 
 [node name="RangedBadguy2" parent="Badguys" instance=ExtResource("4_7ra4i")]
 transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 56, 0, -14.4)
@@ -67,9 +79,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 
 [node name="Door2" parent="Badguys" instance=ExtResource("5_43je3")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 23, 0.5, -29.5)
 
-[node name="RangedBadguy" parent="Badguys" instance=ExtResource("4_7ra4i")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.2, -0.2, -9.5)
-
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door" parent="Doors" instance=ExtResource("5_43je3")]
@@ -78,21 +87,41 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -5.5)
 [node name="Door4" parent="Doors" instance=ExtResource("5_43je3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -16.5)
 
-[node name="Door5" parent="Doors" instance=ExtResource("5_43je3")]
+[node name="YellowDoor" parent="Doors" instance=ExtResource("5_43je3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -29.5164)
 required_key = 1
 
-[node name="KeyColor" parent="Doors/Door5/AnimatableBody3D/scifi-door" index="1"]
+[node name="KeyColor" parent="Doors/YellowDoor/AnimatableBody3D/scifi-door" index="1"]
 material_override = SubResource("StandardMaterial3D_7ra4i")
 
-[node name="KeyColor2" parent="Doors/Door5/AnimatableBody3D/scifi-door" index="2"]
+[node name="KeyColor2" parent="Doors/YellowDoor/AnimatableBody3D/scifi-door" index="2"]
 material_override = SubResource("StandardMaterial3D_wb01y")
+
+[node name="RedDoor" parent="Doors" instance=ExtResource("5_43je3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.5, -64.5164)
+required_key = 0
+
+[node name="KeyColor" parent="Doors/RedDoor/AnimatableBody3D/scifi-door" index="1"]
+material_override = SubResource("StandardMaterial3D_kip3e")
+
+[node name="KeyColor2" parent="Doors/RedDoor/AnimatableBody3D/scifi-door" index="2"]
+material_override = SubResource("StandardMaterial3D_43je3")
 
 [node name="Door3" parent="Doors" instance=ExtResource("5_43je3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.5, -5.5)
 
 [node name="Door2" parent="Doors" instance=ExtResource("5_43je3")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 0.5, -11)
+
+[node name="Keys" type="Node" parent="."]
+
+[node name="YellowKey" parent="Keys" instance=ExtResource("6_7ra4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4, -0.5, 3.5)
+type = 1
+
+[node name="RedKey" parent="Keys" instance=ExtResource("6_7ra4i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.6, -0.5, -4.1)
+type = 0
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
@@ -140,6 +169,17 @@ flip_faces = true
 size = Vector3(3, 3, 1)
 metadata/_edit_lock_ = true
 
+[node name="Doorway8" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.5, 0, -35)
+flip_faces = true
+size = Vector3(3, 3, 1)
+metadata/_edit_lock_ = true
+
+[node name="Doorway9" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -15, 0, -64.5)
+flip_faces = true
+size = Vector3(3, 3, 1)
+
 [node name="Doorway7" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 23, 0, -29.5)
 flip_faces = true
@@ -178,6 +218,18 @@ flip_faces = true
 size = Vector3(6, 3, 12)
 material = ExtResource("5_wb01y")
 metadata/_edit_lock_ = true
+
+[node name="Room14" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -15, 0, -35)
+flip_faces = true
+size = Vector3(4, 3, 18)
+material = ExtResource("5_wb01y")
+
+[node name="Room15" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, -45)
+flip_faces = true
+size = Vector3(4, 3, 38)
+material = ExtResource("5_wb01y")
 
 [node name="Room8" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -23)
@@ -244,17 +296,6 @@ omni_attenuation = 0.1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w72v2")
 
-[node name="Key" parent="." instance=ExtResource("6_7ra4i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.4, -0.5, 3.5)
-type = 1
-
-[node name="Key2" parent="." instance=ExtResource("6_7ra4i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.5, -2)
-type = 0
-
-[node name="Key3" parent="." instance=ExtResource("6_7ra4i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.5, -2)
-type = 2
-
-[editable path="Doors/Door5"]
+[editable path="Doors/YellowDoor"]
+[editable path="Doors/RedDoor"]
 [editable path="FirstPersonController"]
