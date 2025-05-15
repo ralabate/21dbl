@@ -387,4 +387,4 @@ shaded = true
 double_sided = false
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_qwje0")
-animation = &"attack"
+animation = &"chase"

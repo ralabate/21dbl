@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://r0agos3dx780"]
+[gd_scene load_steps=19 format=3 uid="uid://r0agos3dx780"]
 
 [ext_resource type="Script" uid="uid://docgf5x4voevf" path="res://player/first_person_controller.gd" id="1_n4j6h"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_cehq5"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://lbmsr1hnoc77" path="res://player/weapons/decoy_bullet.tscn" id="6_fmphg"]
 [ext_resource type="Texture2D" uid="uid://cvs3aws5vq44a" path="res://player/weapons/images/pistol-fire-1.png" id="6_hynqe"]
 [ext_resource type="Texture2D" uid="uid://dntqhg0mkms44" path="res://player/weapons/images/pistol-fire-2.png" id="7_p4yk0"]
+[ext_resource type="PackedScene" uid="uid://clj2kgl355ryn" path="res://player/weapons/mine_bullet.tscn" id="7_vtoyx"]
 [ext_resource type="Texture2D" uid="uid://prwc0t0inasf" path="res://player/weapons/images/pistol-fire-3.png" id="8_nst1k"]
 [ext_resource type="Texture2D" uid="uid://drbtagputumbv" path="res://player/weapons/images/pistol-fire-4.png" id="9_rvvfq"]
 [ext_resource type="Texture2D" uid="uid://c6citgotws0lu" path="res://level/images/keys/yellow-keycard.png" id="11_p4yk0"]
@@ -71,7 +72,7 @@ metadata/_custom_type_script = "uid://dt1p48op4tcvu"
 [node name="AbilityInventory" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_iatk6")
-abilities = Array[PackedScene]([ExtResource("5_vtoyx"), ExtResource("6_fmphg")])
+abilities = Array[PackedScene]([ExtResource("5_vtoyx"), ExtResource("6_fmphg"), ExtResource("7_vtoyx")])
 metadata/_custom_type_script = "uid://d0dbewhb72jh2"
 
 [node name="KeyInventoryComponent" type="Node" parent="."]
