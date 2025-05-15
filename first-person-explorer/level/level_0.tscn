@@ -300,9 +300,6 @@ environment = SubResource("Environment_w72v2")
 [node name="Slime" parent="." instance=ExtResource("8_kip3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, -1.6)
 
-[node name="CollisionShape3D" parent="Slime/DetectionArea" index="0"]
-disabled = true
-
 [editable path="Doors/YellowDoor"]
 [editable path="Doors/RedDoor"]
 [editable path="FirstPersonController"]
