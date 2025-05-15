@@ -3,12 +3,15 @@ extends Area3D
 
 signal done(affected_list: Array[Node3D])
 
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
+
 var badguy_list: Array[Badguy] = []
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
+	animation_player.speed_scale = 0.1
 
 
 func finished() -> void:
