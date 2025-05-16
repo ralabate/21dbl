@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-@export var SPEED = 5.0
-@export var SPRINT_SPEED = 10.0
+@export var SPEED = 250
+@export var SPRINT_SPEED = 500
 @export var JUMP_VELOCITY = 4.5
 @export var HEAD_TURNING_RATE = 0.1
 
@@ -57,19 +57,16 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	_is_sprinting = Input.is_action_pressed("sprint")
-
 	var input_dir := Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	var current_speed = SPRINT_SPEED if _is_sprinting else SPEED
+	var current_speed = SPRINT_SPEED if Input.is_action_pressed("sprint") else SPEED
 
 	if direction:
-		velocity.x = direction.x * current_speed
-		velocity.z = direction.z * current_speed
+		velocity.x = direction.x * current_speed * delta
+		velocity.z = direction.z * current_speed * delta
 	else:
-		velocity.x = move_toward(velocity.x, 0, current_speed)
-		velocity.z = move_toward(velocity.z, 0, current_speed)
-		_is_sprinting = false
+		velocity.x = 0
+		velocity.z = 0
 
 	move_and_slide()
 

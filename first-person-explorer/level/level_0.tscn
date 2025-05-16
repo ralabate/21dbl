@@ -289,6 +289,7 @@ material = ExtResource("5_wb01y")
 metadata/_edit_lock_ = true
 
 [node name="FirstPersonController" parent="." instance=ExtResource("1_wg3vb")]
+SPEED = 250
 
 [node name="OmniLight3D" parent="FirstPersonController" index="6"]
 omni_range = 17.27
