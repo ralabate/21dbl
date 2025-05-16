@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 
 @export var SPEED = 5.0
+@export var SPRINT_SPEED = 10.0
 @export var JUMP_VELOCITY = 4.5
 @export var HEAD_TURNING_RATE = 0.1
 
@@ -9,12 +10,14 @@ extends CharacterBody3D
 @onready var trigger_fire_component: TriggerFireComponent = %TriggerFireComponent
 @onready var ability_inventory: AbilityInventory = %AbilityInventory
 @onready var key_inventory_component: KeyInventoryComponent = %KeyInventoryComponent
-@onready var weapon_sprite: AnimatedSprite2D = %WeaponSprite
 
 # TODO: Move UI stuff out of here.
+@onready var weapon_sprite: AnimatedSprite2D = %WeaponSprite
 @onready var hurt_flash: ColorRect = %HurtFlashRect
 @onready var health_bar: ProgressBar = %HealthBar
 @onready var key_inventory_container: HBoxContainer = %KeyInventoryContainer
+
+var _is_sprinting = false
 
 
 func _ready() -> void:
@@ -44,7 +47,7 @@ func _input(event: InputEvent) -> void:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 			rotate_y(-deg_to_rad(event.screen_relative.x * HEAD_TURNING_RATE))
 			#$Camera3D.rotate_x(-deg_to_rad(event.screen_relative.y * HEAD_TURNING_RATE))
-			$TriggerFireComponent.direction = global_transform.basis.z
+			trigger_fire_component.direction = global_transform.basis.z
 
 
 func _physics_process(delta: float) -> void:
@@ -54,14 +57,19 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
+	_is_sprinting = Input.is_action_pressed("sprint")
+
 	var input_dir := Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	var current_speed = SPRINT_SPEED if _is_sprinting else SPEED
+
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * current_speed
+		velocity.z = direction.z * current_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, current_speed)
+		velocity.z = move_toward(velocity.z, 0, current_speed)
+		_is_sprinting = false
 
 	move_and_slide()
 
@@ -88,7 +96,6 @@ func _on_weapon_fired() -> void:
 func _on_ability_selected(scene: PackedScene) -> void:
 	trigger_fire_component.ability_template = scene
 	$HUD/AbilityLabel.text = trigger_fire_component.ability_template.resource_path
-
 
 
 func _on_key_acquired(key: DoorKey.Type) -> void:
