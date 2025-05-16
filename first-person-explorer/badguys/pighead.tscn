@@ -1,0 +1,302 @@
+[gd_scene load_steps=56 format=3 uid="uid://cb8ypfuwelckb"]
+
+[ext_resource type="Script" uid="uid://clhircl18kdhh" path="res://badguys/badguy.gd" id="1_gxoxs"]
+[ext_resource type="Material" uid="uid://ci70lplv4aah0" path="res://badguys/damage_overlay.tres" id="2_uhoe6"]
+[ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="3_3wf0l"]
+[ext_resource type="Script" uid="uid://cuiwxj3wnoqag" path="res://common/components/navigation_component.gd" id="4_5t8ox"]
+[ext_resource type="Script" uid="uid://db57k26wi7ltc" path="res://common/components/melee_attack_component.gd" id="5_2ispu"]
+[ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/fsm_component.gd" id="6_2d63p"]
+[ext_resource type="Script" uid="uid://c3mha4eajluii" path="res://badguys/states/badguy_idle_state.gd" id="7_y54ms"]
+[ext_resource type="Script" uid="uid://cdsndtjjy64gx" path="res://badguys/states/badguy_chase_state.gd" id="8_dguck"]
+[ext_resource type="Script" uid="uid://bbx03qgt7jwev" path="res://badguys/states/badguy_attack_state.gd" id="9_2s26e"]
+[ext_resource type="Script" uid="uid://dmrpfrb334jim" path="res://badguys/states/badguy_hurt_state.gd" id="10_g6wg3"]
+[ext_resource type="Script" uid="uid://mgr8rmq8nlia" path="res://badguys/states/badguy_death_state.gd" id="11_odnsl"]
+[ext_resource type="Texture2D" uid="uid://dd62b6oe8cil1" path="res://badguys/images/brown-alien/brown-alien-melee-0.png" id="12_l45ed"]
+[ext_resource type="Texture2D" uid="uid://dwu42jv5a1gh1" path="res://badguys/images/brown-alien/brown-alien-melee-1.png" id="13_j8jx6"]
+[ext_resource type="Texture2D" uid="uid://sb28ut5co135" path="res://badguys/images/brown-alien/brown-alien-melee-2.png" id="14_cn7dk"]
+[ext_resource type="Texture2D" uid="uid://6r6arlpftmbd" path="res://badguys/images/brown-alien/brown-alien-walk-0.png" id="15_6rtgj"]
+[ext_resource type="Texture2D" uid="uid://dsj4gafswh8sp" path="res://badguys/images/pighead/chase/pighead_chase.0001.png" id="15_8jt1i"]
+[ext_resource type="Texture2D" uid="uid://bsev6sd6wo2ct" path="res://badguys/images/pighead/chase/pighead_chase.0002.png" id="16_f5o0h"]
+[ext_resource type="Texture2D" uid="uid://ceag0wjp0d7ox" path="res://badguys/images/pighead/chase/pighead_chase.0003.png" id="17_wgdpj"]
+[ext_resource type="Texture2D" uid="uid://bir6i7ummo7dr" path="res://badguys/images/pighead/chase/pighead_chase.0004.png" id="18_pk81s"]
+[ext_resource type="Texture2D" uid="uid://cmfarvdqwba6h" path="res://badguys/images/pighead/chase/pighead_chase.0005.png" id="19_ybcpn"]
+[ext_resource type="Texture2D" uid="uid://cqsi5mlah1wik" path="res://badguys/images/brown-alien/brown-alien-death-0.png" id="19_ye0yn"]
+[ext_resource type="Texture2D" uid="uid://b58rjyp6fdq6j" path="res://badguys/images/pighead/chase/pighead_chase.0006.png" id="20_do8fe"]
+[ext_resource type="Texture2D" uid="uid://by3x60po1ly1k" path="res://badguys/images/brown-alien/brown-alien-death-1.png" id="20_htsrd"]
+[ext_resource type="Texture2D" uid="uid://c36wdfunw6sdp" path="res://badguys/images/brown-alien/brown-alien-death-2.png" id="21_op7ow"]
+[ext_resource type="Texture2D" uid="uid://pw05kxeeiuko" path="res://badguys/images/pighead/chase/pighead_chase.0007.png" id="21_ro1d4"]
+[ext_resource type="Texture2D" uid="uid://bjpnp8021bdb8" path="res://badguys/images/brown-alien/brown-alien-death-3.png" id="22_e2q0b"]
+[ext_resource type="Texture2D" uid="uid://ld8lh1f4emyi" path="res://badguys/images/pighead/chase/pighead_chase.0008.png" id="22_tmgsf"]
+[ext_resource type="Texture2D" uid="uid://dqqe5rmsim5a6" path="res://badguys/images/brown-alien/brown-alien-death-4.png" id="23_dlqqs"]
+[ext_resource type="Texture2D" uid="uid://ba7rnd4glncke" path="res://badguys/images/pighead/chase/pighead_chase.0009.png" id="23_jsq1y"]
+[ext_resource type="Texture2D" uid="uid://ckr0p5wo1swgf" path="res://badguys/images/brown-alien/brown-alien-death-5.png" id="24_jyifg"]
+[ext_resource type="Texture2D" uid="uid://dbyvufdsbk1hw" path="res://badguys/images/pighead/chase/pighead_chase.0010.png" id="24_l7q6u"]
+[ext_resource type="Texture2D" uid="uid://brtn2jkjngiqj" path="res://badguys/images/pighead/chase/pighead_chase.0011.png" id="25_h634b"]
+[ext_resource type="Texture2D" uid="uid://miwpmty2arkh" path="res://badguys/images/pighead/chase/pighead_chase.0012.png" id="26_pdmwb"]
+[ext_resource type="Texture2D" uid="uid://richxnidrsxu" path="res://badguys/images/pighead/chase/pighead_chase.0013.png" id="27_acf26"]
+[ext_resource type="Texture2D" uid="uid://eaflv6aqs615" path="res://badguys/images/pighead/chase/pighead_chase.0014.png" id="28_nqoiw"]
+[ext_resource type="Texture2D" uid="uid://dmmmme6dc3pw5" path="res://badguys/images/pighead/chase/pighead_chase.0015.png" id="29_nqils"]
+[ext_resource type="Texture2D" uid="uid://krfvrhhm1mtx" path="res://badguys/images/pighead/chase/pighead_chase.0016.png" id="30_nornt"]
+[ext_resource type="Texture2D" uid="uid://hs6r2kq7vhl6" path="res://badguys/images/pighead/chase/pighead_chase.0017.png" id="31_eart1"]
+[ext_resource type="Texture2D" uid="uid://cvenyd2ejxxi4" path="res://badguys/images/pighead/chase/pighead_chase.0018.png" id="32_3d8so"]
+[ext_resource type="Texture2D" uid="uid://bva23664q7ijm" path="res://badguys/images/pighead/chase/pighead_chase.0019.png" id="33_u13qr"]
+[ext_resource type="Texture2D" uid="uid://c48j8vq6nydv8" path="res://badguys/images/pighead/chase/pighead_chase.0020.png" id="34_1vt4a"]
+[ext_resource type="Texture2D" uid="uid://l1ntpmm8flxf" path="res://badguys/images/pighead/chase/pighead_chase.0021.png" id="35_8526e"]
+[ext_resource type="Texture2D" uid="uid://3hx55xfac31" path="res://badguys/images/pighead/chase/pighead_chase.0022.png" id="36_mo4ag"]
+[ext_resource type="Texture2D" uid="uid://dy8q53qgsoum4" path="res://badguys/images/pighead/chase/pighead_chase.0023.png" id="37_i6b4r"]
+[ext_resource type="Texture2D" uid="uid://bvqg32xm3le5g" path="res://badguys/images/pighead/chase/pighead_chase.0024.png" id="38_mllgo"]
+[ext_resource type="Texture2D" uid="uid://hfgc1f87xun8" path="res://badguys/images/pighead/chase/pighead_chase.0025.png" id="39_tbmm2"]
+[ext_resource type="Texture2D" uid="uid://c2u86j5kmhwab" path="res://badguys/images/pighead/chase/pighead_chase.0026.png" id="40_op4h4"]
+[ext_resource type="Texture2D" uid="uid://cgckbircv5kpe" path="res://badguys/images/pighead/chase/pighead_chase.0027.png" id="41_hs64y"]
+[ext_resource type="Texture2D" uid="uid://iix2ghmp661f" path="res://badguys/images/pighead/chase/pighead_chase.0028.png" id="42_7gwfc"]
+[ext_resource type="Texture2D" uid="uid://cinhnokaofpvp" path="res://badguys/images/pighead/chase/pighead_chase.0029.png" id="43_hkq8i"]
+[ext_resource type="Texture2D" uid="uid://b00ko6nmu4nrw" path="res://badguys/images/pighead/chase/pighead_chase.0030.png" id="44_tkrv5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bug4s"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_221m0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_jl7e4"]
+points = PackedVector3Array(0, 0, 0, 3, 0, 7, -3, 0, 7)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qwje0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_l45ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j8jx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_cn7dk")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_8jt1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f5o0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_wgdpj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_pk81s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_ybcpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_do8fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ro1d4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_tmgsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_jsq1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_l7q6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_h634b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_pdmwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_acf26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_nqoiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nqils")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_nornt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_eart1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3d8so")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_u13qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_1vt4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_8526e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_mo4ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_i6b4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_mllgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_tbmm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_op4h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_hs64y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_7gwfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_hkq8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_tkrv5")
+}],
+"loop": true,
+"name": &"chase",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_ye0yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_htsrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_op7ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_e2q0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dlqqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_jyifg")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_ye0yn")
+}],
+"loop": false,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_6rtgj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Pighead" type="CharacterBody3D"]
+collision_layer = 4
+collision_mask = 23
+script = ExtResource("1_gxoxs")
+damage_overlay = ExtResource("2_uhoe6")
+movement_speed = 150.0
+attack_damage = 10
+
+[node name="HealthComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_3wf0l")
+MAX_HEALTH = 3
+metadata/_custom_type_script = "uid://bund4vdf4u4yo"
+
+[node name="NavigationComponent" type="Node" parent="." node_paths=PackedStringArray("navigation_agent")]
+unique_name_in_owner = true
+script = ExtResource("4_5t8ox")
+navigation_agent = NodePath("../NavigationAgent3D")
+metadata/_custom_type_script = "uid://cuiwxj3wnoqag"
+
+[node name="MeleeAttackComponent" type="Node" parent="." node_paths=PackedStringArray("attack_area")]
+unique_name_in_owner = true
+script = ExtResource("5_2ispu")
+attack_area = NodePath("../PlayerDamageArea")
+metadata/_custom_type_script = "uid://db57k26wi7ltc"
+
+[node name="FSMComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_2d63p")
+metadata/_custom_type_script = "uid://d3w1w02heo866"
+
+[node name="BadguyIdleState" type="Node" parent="FSMComponent"]
+script = ExtResource("7_y54ms")
+metadata/_custom_type_script = "uid://c3mha4eajluii"
+
+[node name="BadguyChaseState" type="Node" parent="FSMComponent" node_paths=PackedStringArray("navigation_component")]
+script = ExtResource("8_dguck")
+navigation_component = NodePath("../../NavigationComponent")
+attack_distance = 1.5
+metadata/_custom_type_script = "uid://cdsndtjjy64gx"
+
+[node name="BadguyAttackState" type="Node" parent="FSMComponent" node_paths=PackedStringArray("attack_component")]
+script = ExtResource("9_2s26e")
+attack_component = NodePath("../../MeleeAttackComponent")
+metadata/_custom_type_script = "uid://bbx03qgt7jwev"
+
+[node name="BadguyHurtState" type="Node" parent="FSMComponent"]
+script = ExtResource("10_g6wg3")
+hit_stun_length = 0.25
+metadata/_custom_type_script = "uid://dmrpfrb334jim"
+
+[node name="BadguyDeathState" type="Node" parent="FSMComponent"]
+script = ExtResource("11_odnsl")
+metadata/_custom_type_script = "uid://mgr8rmq8nlia"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_bug4s")
+debug_color = Color(0, 0.6, 0.701961, 1)
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+unique_name_in_owner = true
+
+[node name="PlayerDamageArea" type="Area3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerDamageArea"]
+shape = SubResource("SphereShape3D_221m0")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="DetectionArea" type="Area3D" parent="."]
+unique_name_in_owner = true
+collision_layer = 64
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea"]
+shape = SubResource("ConvexPolygonShape3D_jl7e4")
+debug_color = Color(1, 0, 1, 1)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+unique_name_in_owner = true
+billboard = 1
+shaded = true
+double_sided = false
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_qwje0")
+animation = &"chase"
+frame_progress = 0.795235
