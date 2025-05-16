@@ -4,7 +4,7 @@ class_name TriggerFireComponent extends Node
 signal node_instantiated(badguy: Node3D, location: Vector3, direction: Vector3)
 signal fired
 
-@export var projectile_speed: float
+@export var projectile_template: PackedScene
 @export var vertical_offset: float
 
 var ability_template: PackedScene
@@ -17,10 +17,19 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_pressed("trigger_ability") and can_fire:
+	var template: PackedScene
+	
+	if can_fire:
+		if Input.is_action_pressed("fire_projectile"):
+			template = projectile_template
+		elif Input.is_action_pressed("trigger_ability"):
+			template = ability_template
+
+	if template:
 		node_instantiated.emit(
-			ability_template.instantiate(),
+			template.instantiate(),
 			get_parent().position + (Vector3.UP * vertical_offset),
 			direction
 		)
+
 		fired.emit()

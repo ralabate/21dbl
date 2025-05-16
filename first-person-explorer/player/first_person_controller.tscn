@@ -66,13 +66,14 @@ metadata/_custom_type_script = "uid://bund4vdf4u4yo"
 [node name="TriggerFireComponent" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("3_aio67")
+projectile_template = ExtResource("5_vtoyx")
 vertical_offset = 0.25
 metadata/_custom_type_script = "uid://dt1p48op4tcvu"
 
 [node name="AbilityInventory" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_iatk6")
-abilities = Array[PackedScene]([ExtResource("5_vtoyx"), ExtResource("6_fmphg"), ExtResource("7_vtoyx")])
+abilities = Array[PackedScene]([ExtResource("6_fmphg"), ExtResource("7_vtoyx")])
 metadata/_custom_type_script = "uid://d0dbewhb72jh2"
 
 [node name="KeyInventoryComponent" type="Node" parent="."]

@@ -7,7 +7,7 @@ signal selected_ability(scene: PackedScene)
 
 @export var abilities: Array[PackedScene]
 
-var current_ability = 0
+var _current_ability = 0
 
 
 func _ready() -> void:
@@ -15,18 +15,17 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	var previous = current_ability
-	if Input.is_action_just_pressed("ability_select_up"):
-		current_ability += 1
-	elif Input.is_action_just_pressed("ability_select_down"):
-		current_ability -= 1
+	var previous = _current_ability
+	if Input.is_action_just_pressed("ability_1"):
+		_current_ability = 0
+	elif Input.is_action_just_pressed("ability_2"):
+		_current_ability = 1
 
-	current_ability = clampi(current_ability, 0, abilities.size() - 1)
-	if current_ability != previous:
-		var selected = abilities[current_ability]
+	if _current_ability != previous:
+		var selected = abilities[_current_ability]
 		Log.info("New ability selected: [%s]" % selected)
 		selected_ability.emit(selected)
 
 
 func get_current_ability() -> PackedScene:
-	return abilities[current_ability]
+	return abilities[_current_ability]
