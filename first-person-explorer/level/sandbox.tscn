@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://3tl8ud1pa4hd"]
+[gd_scene load_steps=7 format=3 uid="uid://3tl8ud1pa4hd"]
 
-[ext_resource type="PackedScene" uid="uid://cb8ypfuwelckb" path="res://badguys/pighead.tscn" id="3_g7ks0"]
+[ext_resource type="PackedScene" uid="uid://17qm3tooj34w" path="res://level/triggers/badguy_trigger_area.tscn" id="4_xrx56"]
 [ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/first_person_controller.tscn" id="7_xvgw2"]
 [ext_resource type="PackedScene" uid="uid://bgvnnk8ambbxi" path="res://badguys/slime.tscn" id="8_apv03"]
 
@@ -13,6 +13,9 @@ agent_height = 2.0
 [sub_resource type="Environment" id="Environment_w72v2"]
 background_mode = 1
 ambient_light_source = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7ks0"]
+size = Vector3(8, 1, 4.5)
 
 [node name="Level0" type="Node3D"]
 
@@ -31,7 +34,7 @@ size = Vector3(10, 3, 10)
 metadata/_edit_lock_ = true
 
 [node name="FirstPersonController" parent="." instance=ExtResource("7_xvgw2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
 [node name="OmniLight3D" parent="FirstPersonController" index="6"]
 omni_range = 17.27
@@ -67,9 +70,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, 0.9, 3.2)
 visible = false
 light_color = Color(0, 0, 1, 1)
 
-[node name="Pighead" parent="." instance=ExtResource("3_g7ks0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, -3.4)
+[node name="BadguyTriggerArea" parent="." instance=ExtResource("4_xrx56")]
+
+[node name="CollisionShape3D" parent="BadguyTriggerArea" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.75)
+shape = SubResource("BoxShape3D_g7ks0")
 
 [editable path="FirstPersonController"]
 [editable path="Slime"]
 [editable path="Slime2"]
+[editable path="BadguyTriggerArea"]

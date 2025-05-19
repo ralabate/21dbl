@@ -4,9 +4,10 @@ class_name Badguy
 
 signal death(location: Vector3)
 
-@export var damage_overlay: ShaderMaterial
 @export var movement_speed: float = 50.0
 @export var attack_damage: int = 1
+@export var use_detection_area: bool = false
+
 @onready var detection_area: Area3D = %DetectionArea
 @onready var player_damage_area: Area3D = %PlayerDamageArea
 @onready var health_component: HealthComponent = %HealthComponent
@@ -23,8 +24,10 @@ func _ready():
 	add_to_group("badguys")
 
 	player_damage_area.body_entered.connect(_on_body_entered_attack_area)
-	detection_area.body_entered.connect(_on_body_entered_detection_area)
-	#detection_area.body_exited.connect(_on_body_exited_detection_area)
+	
+	if use_detection_area:
+		detection_area.body_entered.connect(_on_body_entered_detection_area)
+		#detection_area.body_exited.connect(_on_body_exited_detection_area)
 
 	health_component.damage_received.connect(_on_damage_received)
 	health_component.death.connect(_on_death)
@@ -48,6 +51,12 @@ func _physics_process(delta):
 	move_and_slide()
 
 
+func enter_chase_state(target: Node3D) -> void:
+	if navigation_component.target == null:
+		navigation_component.target = target
+		fsm_component.transition("BadguyChaseState")
+
+
 func _on_body_entered_attack_area(body: Node3D) -> void:
 	if body.has_node("HealthComponent"):
 		var health_component = body.get_node("HealthComponent") as HealthComponent
@@ -56,9 +65,7 @@ func _on_body_entered_attack_area(body: Node3D) -> void:
 
 func _on_body_entered_detection_area(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		if navigation_component.target == null:
-			navigation_component.target = body
-		fsm_component.transition("BadguyChaseState")
+		enter_chase_state(body)
 
 
 func _on_body_exited_detection_area(body: Node3D) -> void:

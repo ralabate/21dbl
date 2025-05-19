@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://j3x6ditmos8p"]
+[gd_scene load_steps=18 format=3 uid="uid://j3x6ditmos8p"]
 
 [ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/first_person_controller.tscn" id="1_wg3vb"]
 [ext_resource type="PackedScene" uid="uid://dysqmwq3wem2k" path="res://badguys/walking_badguy.tscn" id="3_wg3vb"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dmpfbiv6a0bm" path="res://level/interactive/door.tscn" id="5_43je3"]
 [ext_resource type="Material" uid="uid://cr6roocmgtkpu" path="res://level/materials/wall_material_default.tres" id="5_wb01y"]
 [ext_resource type="PackedScene" uid="uid://b178sxgv7g7lk" path="res://level/interactive/key.tscn" id="6_7ra4i"]
+[ext_resource type="PackedScene" uid="uid://17qm3tooj34w" path="res://level/triggers/badguy_trigger_area.tscn" id="8_kip3e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ra4i"]
 albedo_color = Color(1, 1, 0, 1)
@@ -30,18 +31,27 @@ agent_height = 2.0
 background_mode = 1
 ambient_light_source = 2
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kip3e"]
+size = Vector3(4, 1, 8.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43je3"]
+size = Vector3(13.5, 1, 8.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rbjax"]
+size = Vector3(5.3, 1, 10.1)
+
 [node name="Level0" type="Node3D"]
 
 [node name="Badguys" type="Node" parent="."]
 
 [node name="BrownMutant2" parent="Badguys" instance=ExtResource("4_kip3e")]
-transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 11.5, 0, -8.2)
+transform = Transform3D(-0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, -0.5, 15.8, 0, -8.2)
 
 [node name="BrownMutant6" parent="Badguys" instance=ExtResource("4_kip3e")]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 4.02331e-07, 0, -11.5)
 
 [node name="BrownMutant3" parent="Badguys" instance=ExtResource("4_kip3e")]
-transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 12.9, 0, -14.1)
+transform = Transform3D(0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, 0.258819, 17.5, 0, -14.1)
 
 [node name="WalkingBadguy3" parent="Badguys" instance=ExtResource("3_wg3vb")]
 transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 21.7, 0, -36.8)
@@ -72,12 +82,6 @@ transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107
 
 [node name="BrownMutant5" parent="Badguys" instance=ExtResource("4_kip3e")]
 transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 38.9, -0.2, -19.9)
-
-[node name="Door" parent="Badguys" instance=ExtResource("5_43je3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0.5, -32.7)
-
-[node name="Door2" parent="Badguys" instance=ExtResource("5_43je3")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 23, 0.5, -29.5)
 
 [node name="Doors" type="Node" parent="."]
 
@@ -112,6 +116,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.5, 0.5, -5.5)
 
 [node name="Door2" parent="Doors" instance=ExtResource("5_43je3")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.5, 0.5, -11)
+
+[node name="Door5" parent="Doors" instance=ExtResource("5_43je3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16.5, 0.5, -32.7)
+
+[node name="Door6" parent="Doors" instance=ExtResource("5_43je3")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 23, 0.5, -29.5)
 
 [node name="Keys" type="Node" parent="."]
 
@@ -296,6 +306,29 @@ omni_attenuation = 0.1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w72v2")
 
+[node name="BadguyTriggerArea" parent="." instance=ExtResource("8_kip3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.7)
+
+[node name="CollisionShape3D" parent="BadguyTriggerArea" index="0"]
+shape = SubResource("BoxShape3D_kip3e")
+
+[node name="BadguyTriggerArea2" parent="." instance=ExtResource("8_kip3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7, 0, -11.1)
+
+[node name="CollisionShape3D" parent="BadguyTriggerArea2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0500002, 0, 0)
+shape = SubResource("BoxShape3D_43je3")
+
+[node name="BadguyTriggerArea3" parent="." instance=ExtResource("8_kip3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7, 0, -11.1)
+
+[node name="CollisionShape3D" parent="BadguyTriggerArea3" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.55, 0, 10.15)
+shape = SubResource("BoxShape3D_rbjax")
+
 [editable path="Doors/YellowDoor"]
 [editable path="Doors/RedDoor"]
 [editable path="FirstPersonController"]
+[editable path="BadguyTriggerArea"]
+[editable path="BadguyTriggerArea2"]
+[editable path="BadguyTriggerArea3"]
