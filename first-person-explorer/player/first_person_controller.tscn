@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://r0agos3dx780"]
+[gd_scene load_steps=20 format=3 uid="uid://r0agos3dx780"]
 
 [ext_resource type="Script" uid="uid://docgf5x4voevf" path="res://player/first_person_controller.gd" id="1_n4j6h"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_cehq5"]
@@ -19,6 +19,9 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_21lqr"]
 height = 1.8
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vtoyx"]
+points = PackedVector3Array(0, 0, 0, -100, 0, -500, 100, 0, -500, -100, 250, -500, 100, 250, -500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dprww"]
 animations = [{
@@ -62,11 +65,12 @@ script = ExtResource("2_cehq5")
 MAX_HEALTH = 100
 metadata/_custom_type_script = "uid://bund4vdf4u4yo"
 
-[node name="TriggerFireComponent" type="Node" parent="."]
+[node name="TriggerFireComponent" type="Node" parent="." node_paths=PackedStringArray("autoaim_region")]
 unique_name_in_owner = true
 script = ExtResource("3_aio67")
 projectile_template = ExtResource("5_vtoyx")
 vertical_offset = 0.25
+autoaim_region = NodePath("../AutoAimRegion")
 metadata/_custom_type_script = "uid://dt1p48op4tcvu"
 
 [node name="AbilityInventory" type="Node" parent="."]
@@ -83,11 +87,18 @@ metadata/_custom_type_script = "uid://bpdw05fio7u8e"
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_21lqr")
 debug_color = Color(0, 0.6, 0.701961, 1)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="AutoAimRegion" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AutoAimRegion"]
+shape = SubResource("ConvexPolygonShape3D_vtoyx")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3

@@ -1,7 +1,6 @@
-[gd_scene load_steps=79 format=3 uid="uid://bgvnnk8ambbxi"]
+[gd_scene load_steps=78 format=3 uid="uid://bgvnnk8ambbxi"]
 
 [ext_resource type="Script" uid="uid://clhircl18kdhh" path="res://badguys/badguy.gd" id="1_omtea"]
-[ext_resource type="Material" uid="uid://ci70lplv4aah0" path="res://badguys/damage_overlay.tres" id="2_ump8y"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="3_mi03j"]
 [ext_resource type="Script" uid="uid://cuiwxj3wnoqag" path="res://common/components/navigation_component.gd" id="4_a7bd2"]
 [ext_resource type="Script" uid="uid://db57k26wi7ltc" path="res://common/components/melee_attack_component.gd" id="5_a56oi"]
@@ -303,7 +302,6 @@ animations = [{
 collision_layer = 4
 collision_mask = 23
 script = ExtResource("1_omtea")
-damage_overlay = ExtResource("2_ump8y")
 movement_speed = 75.0
 attack_damage = 10
 

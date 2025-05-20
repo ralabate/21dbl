@@ -6,13 +6,18 @@ signal fired
 
 @export var projectile_template: PackedScene
 @export var vertical_offset: float
+@export var autoaim_region: Area3D
 
 var ability_template: PackedScene
 var direction: Vector3
 var can_fire: bool
+var autoaim_badguy_list: Array[Node3D]
 
 
 func _ready() -> void:
+	assert(autoaim_region, "Missing auto aim region (Area3D)!")
+	assert(projectile_template, "Missing projectile scene!")
+
 	InstantiationStation.register_instantiator(self)
 
 
@@ -26,10 +31,32 @@ func _physics_process(delta: float) -> void:
 			template = ability_template
 
 	if template:
+		var spawn_point = get_parent().position + (Vector3.UP * vertical_offset)
+		var autoaim_direction = get_autoaim_direction(spawn_point)
+
 		node_instantiated.emit(
 			template.instantiate(),
 			get_parent().position + (Vector3.UP * vertical_offset),
-			direction
+			autoaim_direction
 		)
 
 		fired.emit()
+		Log.info("Triggered projectile -- pos: [%s] - dir: [%s]" %
+			[spawn_point, autoaim_direction])
+
+
+func get_autoaim_direction(projectile_origin: Vector3) -> Vector3:
+	var shortest_distance = 1000.0
+	var direction = get_parent().basis.z
+
+	for overlapping in autoaim_region.get_overlapping_bodies():
+		if overlapping.is_in_group("badguys"):
+			Log.info("Overlapping: [%s]" % overlapping.name)
+			var distance = projectile_origin.distance_to(overlapping.global_position)
+			if distance < shortest_distance:
+				# HACK: WHY DOES THIS HAVE TO BE NEGATIVE???
+				direction = -projectile_origin.direction_to(overlapping.global_position)
+				shortest_distance = distance
+				Log.info("Closest direction: [%s]" % direction)
+
+	return direction
