@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bdtrj0b7djlrm"
+path="res://.godot/imported/box.map-4339153056a288a938b01744cab180fe.tres"
+
+[deps]
+
+source_file="res://level/maps/box.map"
+dest_files=["res://.godot/imported/box.map-4339153056a288a938b01744cab180fe.tres"]
+
+[params]
+
