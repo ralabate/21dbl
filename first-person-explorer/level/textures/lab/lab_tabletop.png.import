@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cdgy6ivoj1rnu"
-path.s3tc="res://.godot/imported/lab_tabletop.png-98875fd5791af94e568729adfbd1b7c6.s3tc.ctex"
+path="res://.godot/imported/lab_tabletop.png-98875fd5791af94e568729adfbd1b7c6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://level/textures/lab/lab_tabletop.png"
-dest_files=["res://.godot/imported/lab_tabletop.png-98875fd5791af94e568729adfbd1b7c6.s3tc.ctex"]
+dest_files=["res://.godot/imported/lab_tabletop.png-98875fd5791af94e568729adfbd1b7c6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
