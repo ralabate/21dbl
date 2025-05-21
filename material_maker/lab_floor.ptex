@@ -1,0 +1,133 @@
+{
+	"connections": [
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		},
+		{
+			"from": "mesh",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 3
+		},
+		{
+			"from": "bricks3",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 1
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@799",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 357.0,
+				"y": 128.5
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 11,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"generic_size": 2,
+			"name": "blend2",
+			"node_position": {
+				"x": -23.0,
+				"y": 148.0
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"amount2": 0.25,
+				"blend_type1": 0.0,
+				"blend_type2": 2
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "bricks3",
+			"node_position": {
+				"x": -655.151000976562,
+				"y": -319.31005859375
+			},
+			"parameters": {
+				"bevel": 0.0,
+				"columns": 4.0,
+				"corner": 0.3,
+				"mortar": 0.05,
+				"pattern": 0,
+				"repeat": 1.0,
+				"round": 0.0,
+				"row_offset": 0.0,
+				"rows": 4.0
+			},
+			"seed_int": 0,
+			"type": "bricks3"
+		},
+		{
+			"name": "mesh",
+			"node_position": {
+				"x": -652.151000976562,
+				"y": 20.68994140625
+			},
+			"parameters": {
+				"diagonal": false,
+				"shape": 0.0,
+				"tiling": 14.0
+			},
+			"seed_int": 0,
+			"type": "mesh"
+		},
+		{
+			"generic_size": 2,
+			"name": "blend2_2",
+			"node_position": {
+				"x": -346.151000976562,
+				"y": -244.31005859375
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"amount2": 1.0,
+				"blend_type1": 0.0,
+				"blend_type2": 2
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
