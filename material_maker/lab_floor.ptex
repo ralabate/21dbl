@@ -1,18 +1,6 @@
 {
 	"connections": [
 		{
-			"from": "blend2",
-			"from_port": 0,
-			"to": "Material",
-			"to_port": 0
-		},
-		{
-			"from": "pattern",
-			"from_port": 0,
-			"to": "blend2_2",
-			"to_port": 1
-		},
-		{
 			"from": "noise_white",
 			"from_port": 0,
 			"to": "blend2_2",
@@ -22,7 +10,7 @@
 			"from": "uniform",
 			"from_port": 0,
 			"to": "blend2_2",
-			"to_port": 0
+			"to_port": 1
 		}
 	],
 	"label": "Graph",
@@ -39,8 +27,8 @@
 			},
 			"name": "Material",
 			"node_position": {
-				"x": 357.0,
-				"y": 128.5
+				"x": 273.0,
+				"y": -108.5
 			},
 			"parameters": {
 				"albedo_color": {
@@ -64,38 +52,6 @@
 			"type": "material"
 		},
 		{
-			"generic_size": 2,
-			"name": "blend2",
-			"node_position": {
-				"x": -23.0,
-				"y": 148.0
-			},
-			"parameters": {
-				"amount1": 1.0,
-				"amount2": 0.25,
-				"blend_type1": 0.0,
-				"blend_type2": 2.0
-			},
-			"seed_int": 0,
-			"type": "blend2"
-		},
-		{
-			"name": "pattern",
-			"node_position": {
-				"x": -807.690612792969,
-				"y": -331.886047363281
-			},
-			"parameters": {
-				"mix": 4.0,
-				"x_scale": 4.0,
-				"x_wave": 2.0,
-				"y_scale": 4.0,
-				"y_wave": 2.0
-			},
-			"seed_int": 0,
-			"type": "pattern"
-		},
-		{
 			"name": "noise_white",
 			"node_position": {
 				"x": -798.690612792969,
@@ -111,14 +67,14 @@
 			"generic_size": 2,
 			"name": "blend2_2",
 			"node_position": {
-				"x": -376.690612792969,
-				"y": -249.886047363281
+				"x": -362.690612792969,
+				"y": -309.886047363281
 			},
 			"parameters": {
 				"amount1": 1.0,
 				"amount2": 0.15,
-				"blend_type1": 2,
-				"blend_type2": 0
+				"blend_type1": 0,
+				"blend_type2": 2
 			},
 			"seed_int": 0,
 			"type": "blend2"
