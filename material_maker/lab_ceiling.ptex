@@ -27,7 +27,7 @@
 	],
 	"label": "Graph",
 	"longdesc": "",
-	"name": "@Node@799",
+	"name": "_Node_799",
 	"node_position": {
 		"x": 0.0,
 		"y": 0.0
@@ -57,7 +57,7 @@
 				"metallic": 0.0,
 				"normal": 1.0,
 				"roughness": 1.0,
-				"size": 11,
+				"size": 11.0,
 				"sss": 1.0
 			},
 			"seed_int": 0,
@@ -72,8 +72,8 @@
 			"parameters": {
 				"color": {
 					"a": 1.0,
-					"b": 0.889999985694885,
-					"g": 0.957833349704742,
+					"b": 0.96484375,
+					"g": 0.986523449420929,
 					"r": 1.0,
 					"type": "Color"
 				}
@@ -100,14 +100,14 @@
 			"generic_size": 2,
 			"name": "blend2",
 			"node_position": {
-				"x": 0.5,
-				"y": -52.0
+				"x": 112.5,
+				"y": -10.0
 			},
 			"parameters": {
 				"amount1": 1.0,
 				"amount2": 0.07,
-				"blend_type1": 2,
-				"blend_type2": 2
+				"blend_type1": 2.0,
+				"blend_type2": 2.0
 			},
 			"seed_int": 0,
 			"type": "blend2"
@@ -150,7 +150,7 @@
 				"y": 296.0
 			},
 			"parameters": {
-				"size": 7
+				"size": 7.0
 			},
 			"seed_int": 0,
 			"type": "noise_white"

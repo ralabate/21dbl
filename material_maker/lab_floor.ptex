@@ -7,21 +7,27 @@
 			"to_port": 0
 		},
 		{
-			"from": "mesh",
+			"from": "pattern",
+			"from_port": 0,
+			"to": "blend2_2",
+			"to_port": 1
+		},
+		{
+			"from": "noise_white",
 			"from_port": 0,
 			"to": "blend2_2",
 			"to_port": 3
 		},
 		{
-			"from": "bricks3",
+			"from": "uniform",
 			"from_port": 0,
 			"to": "blend2_2",
-			"to_port": 1
+			"to_port": 0
 		}
 	],
 	"label": "Graph",
 	"longdesc": "",
-	"name": "@Node@799",
+	"name": "_Node_799",
 	"node_position": {
 		"x": 0.0,
 		"y": 0.0
@@ -51,7 +57,7 @@
 				"metallic": 0.0,
 				"normal": 1.0,
 				"roughness": 1.0,
-				"size": 11,
+				"size": 11.0,
 				"sss": 1.0
 			},
 			"seed_int": 0,
@@ -68,60 +74,72 @@
 				"amount1": 1.0,
 				"amount2": 0.25,
 				"blend_type1": 0.0,
-				"blend_type2": 2
+				"blend_type2": 2.0
 			},
 			"seed_int": 0,
 			"type": "blend2"
 		},
 		{
-			"name": "bricks3",
+			"name": "pattern",
 			"node_position": {
-				"x": -655.151000976562,
-				"y": -319.31005859375
+				"x": -807.690612792969,
+				"y": -331.886047363281
 			},
 			"parameters": {
-				"bevel": 0.0,
-				"columns": 4.0,
-				"corner": 0.3,
-				"mortar": 0.05,
-				"pattern": 0,
-				"repeat": 1.0,
-				"round": 0.0,
-				"row_offset": 0.0,
-				"rows": 4.0
+				"mix": 4.0,
+				"x_scale": 4.0,
+				"x_wave": 2.0,
+				"y_scale": 4.0,
+				"y_wave": 2.0
 			},
 			"seed_int": 0,
-			"type": "bricks3"
+			"type": "pattern"
 		},
 		{
-			"name": "mesh",
+			"name": "noise_white",
 			"node_position": {
-				"x": -652.151000976562,
-				"y": 20.68994140625
+				"x": -798.690612792969,
+				"y": -55.8860473632812
 			},
 			"parameters": {
-				"diagonal": false,
-				"shape": 0.0,
-				"tiling": 14.0
+				"size": 7
 			},
 			"seed_int": 0,
-			"type": "mesh"
+			"type": "noise_white"
 		},
 		{
 			"generic_size": 2,
 			"name": "blend2_2",
 			"node_position": {
-				"x": -346.151000976562,
-				"y": -244.31005859375
+				"x": -376.690612792969,
+				"y": -249.886047363281
 			},
 			"parameters": {
 				"amount1": 1.0,
-				"amount2": 1.0,
-				"blend_type1": 0.0,
-				"blend_type2": 2
+				"amount2": 0.15,
+				"blend_type1": 2,
+				"blend_type2": 0
 			},
 			"seed_int": 0,
 			"type": "blend2"
+		},
+		{
+			"name": "uniform",
+			"node_position": {
+				"x": -605.690612792969,
+				"y": -485.886047363281
+			},
+			"parameters": {
+				"color": {
+					"a": 1.0,
+					"b": 0.2890625,
+					"g": 0.2890625,
+					"r": 0.2890625,
+					"type": "Color"
+				}
+			},
+			"seed_int": 0,
+			"type": "uniform"
 		}
 	],
 	"parameters": {
