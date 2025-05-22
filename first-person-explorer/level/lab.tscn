@@ -831,711 +831,947 @@ metadata/_edit_lock_ = true
 
 [node name="entity_0_worldspawn" type="StaticBody3D" parent="NavigationRegion3D/FuncGodotMap"]
 collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="entity_0_mesh_instance" type="MeshInstance3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 mesh = SubResource("ArrayMesh_ji7rh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_occluder_instance" type="OccluderInstance3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 occluder = SubResource("ArrayOccluder3D_3ypoi")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_8xnn3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_1_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_f1iti")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_2_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_y0yan")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_3_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_xv3me")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_4_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3gkp2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_5_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2mudg")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_6_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_c13tw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_7_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2aopt")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_8_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jrgc0")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_9_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_a8cio")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_10_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_rop6m")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_11_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_050e6")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_12_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ab5iv")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_13_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_debcn")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_14_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_nqo8h")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_15_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_emlco")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_16_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_666cw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_17_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1xp7x")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_18_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ejy6f")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_19_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_otymw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_20_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_31ikv")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_21_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_n0ay7")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_22_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4q23e")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_23_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ay4k4")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_24_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_rx8vx")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_25_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2rq5e")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_26_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_q8w27")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_27_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_vudam")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_28_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ogvu5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_29_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6fv2o")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_30_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_i5uhm")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_31_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ipfxd")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_32_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_x3xyb")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_33_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_esi42")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_34_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_7cmdg")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_35_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wyhmj")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_36_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_x5bbl")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_37_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4cdus")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_38_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_u0k53")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_39_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_qug71")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_40_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_rahgq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_41_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_yf2ii")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_42_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_u6u4u")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_43_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_twfdi")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_44_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3atwu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_45_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_r1a4v")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_46_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_p8u4d")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_47_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wetgm")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_48_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cknn3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_49_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_mf13e")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_50_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_j41sv")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_51_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_0soxb")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_52_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_aa53u")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_53_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cbbap")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_54_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_hjh2k")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_55_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1ar3x")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_56_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wayjd")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_57_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pwlff")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_58_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cxxh0")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_59_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ilhhl")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_60_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_drov1")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_61_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_bgkc3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_62_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wlcxe")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_63_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jc45y")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_64_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_t4w32")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_65_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_e0twx")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_66_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_grg6f")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_67_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_71xvw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_68_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pg57m")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_69_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_nenpr")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_70_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_70qp1")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_71_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wt2ax")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_72_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_qxc1d")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_73_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6gcfw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_74_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ye3pf")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_75_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_yugjw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_76_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pkowh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_77_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_alioa")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_78_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jy18f")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_79_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_dv015")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_80_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_enfnq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_81_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_8p6on")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_82_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wiwvq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_83_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ilwsk")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_84_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_msjvh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_85_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ho0n0")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_86_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_g0mcd")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_87_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_up5fr")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_88_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_usi0h")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_89_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1yfkr")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_90_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jiqs1")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_91_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_5i1gw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_92_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_7t1qu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_93_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_me7ug")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_94_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_vhvqh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_95_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_mcmn3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_96_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1nvtd")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_97_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_mwntm")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_98_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1v1qf")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_99_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_fde4w")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_100_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2ou7e")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_101_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_fkjn0")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_102_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_q62cx")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_103_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_u17h2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_104_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ot4ed")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_105_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_a800s")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_106_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_eyeml")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_107_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_e3gtq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_108_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3kxmx")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_109_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_bu7m0")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_110_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_p3oj1")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_111_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_7wawu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_112_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_c5ffj")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_113_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3g3rq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_114_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_7c6ge")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_115_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1agmu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_116_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_uoojm")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_117_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_e4gae")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_118_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_aohct")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_119_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_0kphq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_120_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_304jg")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_121_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pueyw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_122_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ealh7")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_123_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_utxrm")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_124_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ih65n")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_125_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_k5uyv")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_126_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_0o7k5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_127_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_qfon5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_128_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_kyqb2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_129_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_qvvul")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_130_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_rbg7k")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_131_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4rjos")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_132_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wy5fy")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_133_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_dfcu2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_134_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4xic3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_135_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_a3w5p")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_136_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_d84f0")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_137_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_fmjpq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_138_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_panco")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_139_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_sj3de")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_140_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_l0oi2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_141_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_c7shh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_142_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_oegl5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_143_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6hed5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_144_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_5c5t2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_145_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_qoonk")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_146_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2e7b5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_147_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_f2lbw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_148_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_sfluf")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_149_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_rhtgh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_150_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_83i16")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_151_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_n40yn")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_152_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_5lsur")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_153_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_obocp")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_154_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_5rhhf")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_155_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_5kf2l")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_156_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_scq37")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_157_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ocuma")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_158_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_l8eli")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_159_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3qctr")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_160_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1ruhe")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_161_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_yfmp6")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_162_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_hm7ox")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_163_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_er7gh")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_164_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1jgmu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_165_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_obslu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_166_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_n2b55")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_167_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_2rfx5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_168_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_nl7ii")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_169_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_kn4wq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_170_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_8ri0q")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_171_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_chn87")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_172_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cishv")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_173_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ceyfx")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_174_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3j1aw")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_175_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pyvv3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_176_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_w7aut")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_177_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_tk6xi")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_178_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_je26m")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_179_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4kxgj")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_180_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_sgnng")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_181_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6aogg")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_182_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3l22l")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_183_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_eg06d")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_184_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1xlsn")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_185_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cdda6")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_186_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ifjgi")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_187_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_d1msg")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_188_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_jihlf")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_189_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_58k3u")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_190_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_70lwa")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_191_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_4yqow")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_192_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cgwb5")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_193_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_hj5xk")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_194_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_3vvm3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_195_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_m70h4")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_196_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_1snuq")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_197_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_mmqe3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_198_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_sqosi")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_199_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_vwgi7")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_200_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_nygtn")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_201_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_w684h")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_202_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_14l3s")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_203_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pl1jv")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_204_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_bhy7y")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_205_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_usspx")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_206_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_j57p7")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_207_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_lhyhy")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_208_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_0ieu3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_209_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_5uih1")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_210_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_x8ps3")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_211_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_efudr")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_212_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ar7g2")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_213_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_wuxld")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_214_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_sh8t1")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_215_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_6ydri")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_216_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_qg5n7")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_217_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ntvrm")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_218_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_xmytc")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_219_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_ptbma")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_220_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_xb63d")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_221_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_f4veu")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_222_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_cfywa")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_223_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_oax4f")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_224_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_tyo5u")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_225_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_pifuy")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_226_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_y8vir")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_227_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_olv4x")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_228_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_i25ug")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_229_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_8qyci")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_230_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_k6ir7")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_231_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_8hdba")
+metadata/_edit_lock_ = true
 
 [node name="entity_0_brush_232_collision_shape" type="CollisionShape3D" parent="NavigationRegion3D/FuncGodotMap/entity_0_worldspawn"]
 shape = SubResource("ConvexPolygonShape3D_kt2e3")
+metadata/_edit_lock_ = true
 
 [node name="FirstPersonController" parent="." instance=ExtResource("4_g50wv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.3, 1.4, 9)
@@ -1555,6 +1791,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.1, 
 
 [node name="Door3" parent="Doors" instance=ExtResource("6_dsedr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.1, 2, 17.5)
+open_once = true
 
 [node name="Door2" parent="Doors" instance=ExtResource("6_dsedr")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6.1, 2, -17.5)
@@ -1608,7 +1845,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.4, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 1.5, 0)
 
 [node name="Slime2" parent="." instance=ExtResource("13_8xnn3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 6.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 1.5, 20.7)
 
 [node name="Slime3" parent="." instance=ExtResource("13_8xnn3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5.6)

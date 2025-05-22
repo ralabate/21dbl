@@ -3,6 +3,7 @@ extends Area3D
 
 @export var required_key: DoorKey.Type = DoorKey.Type.NONE
 @export var opening_speed: float = 1.0
+@export var open_once: bool = false
 
 @onready var animation_player = %AnimationPlayer
 
@@ -35,7 +36,12 @@ func _on_body_entered(body: Node3D) -> void:
 	if can_open:
 		animation_player.play("open")
 		is_open = true
-		body_list.append(body)
+		
+		if open_once:
+			await animation_player.animation_finished
+			queue_free()
+		else:
+			body_list.append(body)
 
 
 func _on_body_exited(body: Node3D) -> void:
