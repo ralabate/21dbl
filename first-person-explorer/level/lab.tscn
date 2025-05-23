@@ -1848,7 +1848,7 @@ shape = SubResource("BoxShape3D_8xnn3")
 
 [node name="BadguyTriggerArea2" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("12_3ypoi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.3, 1, 14.2)
-node_list = [NodePath("../../Doors/TrapDoor"), NodePath("../../Eyeball")]
+node_list = [NodePath("../../Doors/TrapDoor"), NodePath("../../Badguys/Eyeball"), NodePath("../../Badguys/Eyeball2"), NodePath("../../Badguys/Eyeball3")]
 draw_lines_ingame = true
 
 [node name="CollisionShape3D" parent="Triggers/BadguyTriggerArea2" index="0"]
@@ -1862,8 +1862,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 1.5, 0)
 [node name="Slime2" parent="Badguys" instance=ExtResource("13_8xnn3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3, 1.5, -6.7)
 
-[node name="Eyeball" parent="." instance=ExtResource("15_y0yan")]
+[node name="Eyeball" parent="Badguys" instance=ExtResource("15_y0yan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.3, 1.5, 18.8)
+
+[node name="Eyeball2" parent="Badguys" instance=ExtResource("15_y0yan")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3, 1.5, 17.3)
+
+[node name="Eyeball3" parent="Badguys" instance=ExtResource("15_y0yan")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4, 1.5, 15.7)
 
 [editable path="FirstPersonController"]
 [editable path="Triggers/BadguyTriggerArea"]

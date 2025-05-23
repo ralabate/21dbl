@@ -15,7 +15,7 @@ func attack() -> void:
 	var parent = get_parent()
 	node_instantiated.emit(
 		bullet,
-		parent.transform.origin + parent.transform.basis.z,
+		parent.transform.origin + parent.transform.basis.z + Vector3.UP * 0.5,
 		-parent.transform.basis.z
 	)
 	await get_tree().create_timer(1.0).timeout

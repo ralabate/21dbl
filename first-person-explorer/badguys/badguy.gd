@@ -43,7 +43,8 @@ func _ready():
 func _physics_process(delta):
 	if is_moving:
 		velocity = movement_direction * movement_speed * delta
-		#look_at(transform.origin - player.transform.basis.z)
+		var nav_target = navigation_component.target
+		look_at(transform.origin - nav_target.transform.basis.z)
 	
 	move_and_slide()
 

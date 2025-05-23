@@ -1,10 +1,11 @@
-[gd_scene load_steps=107 format=3 uid="uid://c1u857uxt74dr"]
+[gd_scene load_steps=108 format=3 uid="uid://c1u857uxt74dr"]
 
 [ext_resource type="Script" uid="uid://clhircl18kdhh" path="res://badguys/badguy.gd" id="1_7cur0"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_vaenl"]
 [ext_resource type="Script" uid="uid://cuiwxj3wnoqag" path="res://common/components/navigation_component.gd" id="3_8tjlb"]
-[ext_resource type="Script" uid="uid://db57k26wi7ltc" path="res://common/components/melee_attack_component.gd" id="4_flxjf"]
+[ext_resource type="Script" uid="uid://tb00nu6v8wu2" path="res://common/components/ranged_attack_component.gd" id="4_x32sg"]
 [ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/fsm_component.gd" id="5_6l6r4"]
+[ext_resource type="PackedScene" uid="uid://ccha1k3c1jk0d" path="res://badguys/bullet/badguy_bullet.tscn" id="5_6pyap"]
 [ext_resource type="Script" uid="uid://c3mha4eajluii" path="res://badguys/states/badguy_idle_state.gd" id="6_135te"]
 [ext_resource type="Script" uid="uid://cdsndtjjy64gx" path="res://badguys/states/badguy_chase_state.gd" id="7_r1c6p"]
 [ext_resource type="Script" uid="uid://bbx03qgt7jwev" path="res://badguys/states/badguy_attack_state.gd" id="8_lrgww"]
@@ -436,11 +437,10 @@ script = ExtResource("3_8tjlb")
 navigation_agent = NodePath("../NavigationAgent3D")
 metadata/_custom_type_script = "uid://cuiwxj3wnoqag"
 
-[node name="MeleeAttackComponent" type="Node" parent="." node_paths=PackedStringArray("attack_area")]
-unique_name_in_owner = true
-script = ExtResource("4_flxjf")
-attack_area = NodePath("../PlayerDamageArea")
-metadata/_custom_type_script = "uid://db57k26wi7ltc"
+[node name="RangedAttackComponent" type="Node" parent="."]
+script = ExtResource("4_x32sg")
+bullet_template = ExtResource("5_6pyap")
+metadata/_custom_type_script = "uid://tb00nu6v8wu2"
 
 [node name="FSMComponent" type="Node" parent="."]
 unique_name_in_owner = true
@@ -454,12 +454,12 @@ metadata/_custom_type_script = "uid://c3mha4eajluii"
 [node name="BadguyChaseState" type="Node" parent="FSMComponent" node_paths=PackedStringArray("navigation_component")]
 script = ExtResource("7_r1c6p")
 navigation_component = NodePath("../../NavigationComponent")
-attack_distance = 1.5
+attack_distance = 8.0
 metadata/_custom_type_script = "uid://cdsndtjjy64gx"
 
 [node name="BadguyAttackState" type="Node" parent="FSMComponent" node_paths=PackedStringArray("attack_component")]
 script = ExtResource("8_lrgww")
-attack_component = NodePath("../../MeleeAttackComponent")
+attack_component = NodePath("../../RangedAttackComponent")
 metadata/_custom_type_script = "uid://bbx03qgt7jwev"
 
 [node name="BadguyHurtState" type="Node" parent="FSMComponent"]
@@ -504,5 +504,4 @@ shaded = true
 double_sided = false
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_qwje0")
-animation = &"chase"
-frame_progress = 0.185289
+animation = &"idle"
