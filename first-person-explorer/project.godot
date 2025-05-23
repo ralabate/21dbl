@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="First Person Explorer"
-run/main_scene="uid://j3x6ditmos8p"
+run/main_scene="uid://cavfltm6pdmnq"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 

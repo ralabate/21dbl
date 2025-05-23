@@ -20,6 +20,19 @@ func _ready() -> void:
 	is_open = false
 
 
+func wake() -> void:
+	open()
+
+
+func open() -> void:
+	animation_player.play("open")
+	is_open = true
+	
+	if open_once:
+		await animation_player.animation_finished
+		queue_free()
+
+
 func _on_body_entered(body: Node3D) -> void:
 	if is_open:
 		return
@@ -34,14 +47,9 @@ func _on_body_entered(body: Node3D) -> void:
 		Log.info("Door requires key: [%s]" % required_key)
 	
 	if can_open:
-		animation_player.play("open")
-		is_open = true
-		
-		if open_once:
-			await animation_player.animation_finished
-			queue_free()
-		else:
-			body_list.append(body)
+		open()
+	
+	body_list.append(body)
 
 
 func _on_body_exited(body: Node3D) -> void:

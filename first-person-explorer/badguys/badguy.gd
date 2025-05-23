@@ -17,7 +17,7 @@ signal death(location: Vector3)
 
 var is_moving = false
 var movement_direction: Vector3
-var player: Node3D
+#var player: Node3D
 
 
 func _ready():
@@ -39,16 +39,19 @@ func _ready():
 	fsm_component.transitioned.connect(_on_fsm_transitioned_state)
 	fsm_component.transition("BadguyIdleState")
 
-	# HACK: Let's find another way to do this...
-	player = get_tree().get_first_node_in_group("player")
-
 
 func _physics_process(delta):
 	if is_moving:
 		velocity = movement_direction * movement_speed * delta
-
-	look_at(transform.origin - player.transform.basis.z)
+		#look_at(transform.origin - player.transform.basis.z)
+	
 	move_and_slide()
+
+
+func wake() -> void:
+	# HACK: Let's find another way to do this...
+	var player = get_tree().get_first_node_in_group("player")
+	enter_chase_state(player)
 
 
 func enter_chase_state(target: Node3D) -> void:

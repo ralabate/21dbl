@@ -4,9 +4,10 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_37fxo"]
 
-[node name="BadguyTriggerArea" type="Area3D"]
+[node name="NodeTriggerArea" type="Area3D"]
 collision_mask = 6
 script = ExtResource("1_37fxo")
+debug_line_color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_37fxo")
