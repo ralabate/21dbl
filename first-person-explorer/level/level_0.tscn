@@ -299,10 +299,6 @@ metadata/_edit_lock_ = true
 
 [node name="FirstPersonController" parent="." instance=ExtResource("1_wg3vb")]
 
-[node name="OmniLight3D" parent="FirstPersonController" index="5"]
-omni_range = 17.27
-omni_attenuation = 0.1
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w72v2")
 

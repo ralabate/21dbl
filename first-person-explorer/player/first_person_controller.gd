@@ -1,15 +1,20 @@
 extends CharacterBody3D
 
 
-@export var SPEED = 250
-@export var SPRINT_SPEED = 500
-@export var JUMP_VELOCITY = 4.5
-@export var HEAD_TURNING_RATE = 0.1
+@export var speed = 250
+@export var sprint_speed = 500
+@export var jump_velocity = 4.5
+@export var head_turning_rate = 0.1
+@export var headbob_speed = 1.0
+@export var headbob_amount = 0.05
+@export var headbob_frequency = 10.0
+
 
 @onready var health_component: HealthComponent = %HealthComponent
 @onready var trigger_fire_component: TriggerFireComponent = %TriggerFireComponent
 @onready var ability_inventory: AbilityInventory = %AbilityInventory
 @onready var key_inventory_component: KeyInventoryComponent = %KeyInventoryComponent
+@onready var camera: Camera3D = %Camera3D
 
 # TODO: Move UI stuff out of here.
 @onready var weapon_sprite: AnimatedSprite2D = %WeaponSprite
@@ -18,6 +23,8 @@ extends CharacterBody3D
 @onready var key_inventory_container: HBoxContainer = %KeyInventoryContainer
 
 var _is_sprinting = false
+var default_camera_pos: Vector3
+var headbob_timer = 0.0
 
 
 func _ready() -> void:
@@ -29,6 +36,8 @@ func _ready() -> void:
 	trigger_fire_component.ability_template = ability_inventory.get_current_ability()
 	ability_inventory.selected_ability.connect(_on_ability_selected)
 	key_inventory_component.key_acquired.connect(_on_key_acquired)
+	
+	default_camera_pos = camera.position
 
 	# TODO: Move UI stuff out of here.
 	hurt_flash.visible = false
@@ -45,8 +54,7 @@ func _input(event: InputEvent) -> void:
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE else Input.MOUSE_MODE_VISIBLE
 	elif event is InputEventMouseMotion:
 		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			rotate_y(-deg_to_rad(event.screen_relative.x * HEAD_TURNING_RATE))
-			#$Camera3D.rotate_x(-deg_to_rad(event.screen_relative.y * HEAD_TURNING_RATE))
+			rotate_y(-deg_to_rad(event.screen_relative.x * head_turning_rate))
 			trigger_fire_component.direction = global_transform.basis.z
 
 
@@ -55,11 +63,11 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		velocity.y = jump_velocity
 
 	var input_dir := Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	var current_speed = SPRINT_SPEED if Input.is_action_pressed("sprint") else SPEED
+	var current_speed = sprint_speed if Input.is_action_pressed("sprint") else speed
 
 	if direction:
 		velocity.x = direction.x * current_speed * delta
@@ -69,6 +77,17 @@ func _physics_process(delta: float) -> void:
 		velocity.z = 0
 
 	move_and_slide()
+	
+	if velocity.length() > 0.1:
+		headbob_timer += delta * headbob_frequency
+		camera.position = default_camera_pos + Vector3(
+			0,
+			sin(headbob_timer * headbob_speed) * headbob_amount,
+			0
+		)
+	else:
+		headbob_timer = 0.0
+		camera.position = default_camera_pos
 
 
 func update_health_bar_value() -> void:
