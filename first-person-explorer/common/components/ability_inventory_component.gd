@@ -20,6 +20,8 @@ func _process(delta: float) -> void:
 		_current_ability = 0
 	elif Input.is_action_just_pressed("ability_2"):
 		_current_ability = 1
+	elif Input.is_action_just_pressed("ability_3"):
+		_current_ability = 2
 
 	if _current_ability != previous:
 		var selected = abilities[_current_ability]

@@ -9,7 +9,6 @@ extends CharacterBody3D
 @export var headbob_amount = 0.05
 @export var headbob_frequency = 10.0
 
-
 @onready var health_component: HealthComponent = %HealthComponent
 @onready var trigger_fire_component: TriggerFireComponent = %TriggerFireComponent
 @onready var ability_inventory: AbilityInventory = %AbilityInventory
