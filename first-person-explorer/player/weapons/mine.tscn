@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://brnxv2baowehj"]
 
 [ext_resource type="Script" uid="uid://bs6f774rygn3c" path="res://player/weapons/mine.gd" id="1_iuis7"]
-[ext_resource type="PackedScene" uid="uid://c0wxsm0j6nvqy" path="res://vfx/mine_explosion.tscn" id="2_5esde"]
+[ext_resource type="PackedScene" uid="uid://c0wxsm0j6nvqy" path="res://player/weapons/vfx/mine_explosion.tscn" id="2_5esde"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ho4jl"]
 radius = 3.0
