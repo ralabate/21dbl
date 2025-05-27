@@ -18,13 +18,13 @@ func _ready() -> void:
 	assert(type != Type.NONE, "Type not assigned!")
 	body_entered.connect(_on_body_entered)
 	
-	match type:
-		DoorKey.Type.RED:
-			sprite.texture = load("res://level/images/keys/red-keycard.png")
-		DoorKey.Type.YELLOW:
-			sprite.texture = load("res://level/images/keys/yellow-keycard.png")
-		DoorKey.Type.BLUE:
-			sprite.texture = load("res://level/images/keys/blue-keycard.png")
+	#match type:
+		#DoorKey.Type.RED:
+			#sprite.texture = load("res://level/images/keys/red-keycard.png")
+		#DoorKey.Type.YELLOW:
+			#sprite.texture = load("res://level/images/keys/yellow-keycard.png")
+		#DoorKey.Type.BLUE:
+			#sprite.texture = load("res://level/images/keys/blue-keycard.png")
 
 
 func _on_body_entered(body: Node3D) -> void:
