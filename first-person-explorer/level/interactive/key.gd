@@ -10,7 +10,7 @@ enum Type {
 
 @export var type: Type = Type.NONE
 
-@onready var sprite: Sprite3D = %Sprite3D
+@onready var animated_sprite: AnimatedSprite3D = %AnimatedSprite3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -18,13 +18,13 @@ func _ready() -> void:
 	assert(type != Type.NONE, "Type not assigned!")
 	body_entered.connect(_on_body_entered)
 	
-	#match type:
-		#DoorKey.Type.RED:
-			#sprite.texture = load("res://level/images/keys/red-keycard.png")
-		#DoorKey.Type.YELLOW:
-			#sprite.texture = load("res://level/images/keys/yellow-keycard.png")
-		#DoorKey.Type.BLUE:
-			#sprite.texture = load("res://level/images/keys/blue-keycard.png")
+	match type:
+		DoorKey.Type.RED:
+			animated_sprite.play("red")
+		DoorKey.Type.YELLOW:
+			animated_sprite.play("yellow")
+		DoorKey.Type.BLUE:
+			animated_sprite.play("blue")
 
 
 func _on_body_entered(body: Node3D) -> void:
