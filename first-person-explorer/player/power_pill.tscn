@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bb66s3pjp42pv"]
 
-[ext_resource type="Script" uid="uid://diwn2ewtvyed5" path="res://player/stores/power_pill.gd" id="1_sp43c"]
+[ext_resource type="Script" uid="uid://diwn2ewtvyed5" path="res://player/power_pill.gd" id="1_sp43c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vdl7w"]
 shading_mode = 0
