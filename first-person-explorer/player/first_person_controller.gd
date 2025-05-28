@@ -13,6 +13,7 @@ extends CharacterBody3D
 @onready var trigger_fire_component: TriggerFireComponent = %TriggerFireComponent
 @onready var ability_inventory: AbilityInventory = %AbilityInventory
 @onready var key_inventory_component: KeyInventoryComponent = %KeyInventoryComponent
+@onready var uni_ammo_component: UniversalAmmoComponent = %UniversalAmmoComponent
 @onready var camera: Camera3D = %Camera3D
 
 # TODO: Move UI stuff out of here.
@@ -30,11 +31,14 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	health_component.damage_received.connect(_on_damage_received)
-	trigger_fire_component.fired.connect(_on_weapon_fired)
-	trigger_fire_component.can_fire = true
-	trigger_fire_component.ability_template = ability_inventory.get_current_ability()
 	ability_inventory.selected_ability.connect(_on_ability_selected)
 	key_inventory_component.key_acquired.connect(_on_key_acquired)
+	uni_ammo_component.amount_changed.connect(_on_ammo_amount_changed)
+
+	trigger_fire_component.fired.connect(_on_weapon_fired)
+	trigger_fire_component.ammo_requested.connect(_on_ammo_requested)
+	trigger_fire_component.can_fire = true
+	trigger_fire_component.ability_template = ability_inventory.get_current_ability()
 	
 	default_camera_pos = camera.position
 
@@ -46,6 +50,7 @@ func _ready() -> void:
 		key_icon.visible = false
 
 	$HUD/AbilityLabel.text = trigger_fire_component.ability_template.resource_path
+	$HUD/AmmoLabel.text = str(uni_ammo_component.amount)
 
 
 func _input(event: InputEvent) -> void:
@@ -106,6 +111,17 @@ func _on_weapon_fired() -> void:
 	await weapon_sprite.animation_finished
 	weapon_sprite.play("idle")
 	trigger_fire_component.can_fire = true
+
+
+func _on_ammo_requested() -> void:
+	var amount_required = ability_inventory.get_ammo_required()
+	if uni_ammo_component.has_ammo(amount_required):
+		trigger_fire_component.use_current_ability()
+		uni_ammo_component.use_ammo(amount_required)
+
+
+func _on_ammo_amount_changed(new_amount: int) -> void:
+	$HUD/AmmoLabel.text = str(new_amount)
 
 
 func _on_ability_selected(scene: PackedScene) -> void:

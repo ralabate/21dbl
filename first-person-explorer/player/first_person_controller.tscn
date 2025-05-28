@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://r0agos3dx780"]
+[gd_scene load_steps=22 format=3 uid="uid://r0agos3dx780"]
 
 [ext_resource type="Script" uid="uid://docgf5x4voevf" path="res://player/first_person_controller.gd" id="1_n4j6h"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_cehq5"]
 [ext_resource type="Script" uid="uid://d0dbewhb72jh2" path="res://common/components/ability_inventory_component.gd" id="2_iatk6"]
 [ext_resource type="Script" uid="uid://dt1p48op4tcvu" path="res://common/components/trigger_fire_component.gd" id="3_aio67"]
+[ext_resource type="Script" uid="uid://b5g5owk8uw2u2" path="res://common/components/universal_ammo_component.gd" id="5_bs386"]
 [ext_resource type="Texture2D" uid="uid://dty6l6qg7fkh5" path="res://player/weapons/images/pistol-fire-0.png" id="5_dprww"]
 [ext_resource type="Script" uid="uid://bpdw05fio7u8e" path="res://common/components/key_inventory_component.gd" id="5_hynqe"]
 [ext_resource type="PackedScene" uid="uid://ddrgx7hx1ypm1" path="res://player/weapons/bullet.tscn" id="5_vtoyx"]
@@ -74,10 +75,17 @@ vertical_offset = 0.25
 autoaim_region = NodePath("../AutoAimRegion")
 metadata/_custom_type_script = "uid://dt1p48op4tcvu"
 
+[node name="UniversalAmmoComponent" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_bs386")
+amount = 10
+metadata/_custom_type_script = "uid://b5g5owk8uw2u2"
+
 [node name="AbilityInventory" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("2_iatk6")
 abilities = Array[PackedScene]([ExtResource("6_fmphg"), ExtResource("7_vtoyx"), ExtResource("8_72dxh")])
+ammo_required = Array[int]([5, 5, 10])
 metadata/_custom_type_script = "uid://d0dbewhb72jh2"
 
 [node name="KeyInventoryComponent" type="Node" parent="."]
@@ -180,3 +188,18 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 23.0
 grow_horizontal = 2
+
+[node name="AmmoLabel" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -512.0
+offset_top = -24.0
+offset_right = -439.0
+offset_bottom = -1.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1,000,000"

@@ -2,6 +2,7 @@ class_name TriggerFireComponent extends Node
 
 
 signal node_instantiated(badguy: Node3D, location: Vector3, direction: Vector3)
+signal ammo_requested
 signal fired
 
 @export var projectile_template: PackedScene
@@ -22,27 +23,30 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	var template: PackedScene
-	
 	if can_fire:
 		if Input.is_action_pressed("fire_projectile"):
-			template = projectile_template
+			spawn(projectile_template)
 		elif Input.is_action_pressed("trigger_ability"):
-			template = ability_template
+			ammo_requested.emit()
 
-	if template:
-		var spawn_point = get_parent().position + (Vector3.UP * vertical_offset)
-		var autoaim_direction = get_autoaim_direction(spawn_point)
 
-		node_instantiated.emit(
-			template.instantiate(),
-			get_parent().position + (Vector3.UP * vertical_offset),
-			autoaim_direction
-		)
+func use_current_ability() -> void:
+	spawn(ability_template)
 
-		fired.emit()
-		Log.info("Triggered projectile -- pos: [%s] - dir: [%s]" %
-			[spawn_point, autoaim_direction])
+
+func spawn(template: PackedScene) -> void:
+	var spawn_point = get_parent().position + (Vector3.UP * vertical_offset)
+	var autoaim_direction = get_autoaim_direction(spawn_point)
+
+	node_instantiated.emit(
+		template.instantiate(),
+		get_parent().position + (Vector3.UP * vertical_offset),
+		autoaim_direction
+	)
+
+	fired.emit()
+	#Log.info("Triggered projectile -- pos: [%s] - dir: [%s]" %
+		#[spawn_point, autoaim_direction])
 
 
 func get_autoaim_direction(projectile_origin: Vector3) -> Vector3:

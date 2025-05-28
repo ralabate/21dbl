@@ -6,11 +6,13 @@ signal selected_ability(scene: PackedScene)
 
 
 @export var abilities: Array[PackedScene]
+@export var ammo_required: Array[int]
 
 var _current_ability = 0
 
 
 func _ready() -> void:
+	assert(abilities.size() == ammo_required.size(), "Hack hack hack")
 	InstantiationStation.register_instantiator(self)
 
 
@@ -31,3 +33,7 @@ func _process(delta: float) -> void:
 
 func get_current_ability() -> PackedScene:
 	return abilities[_current_ability]
+
+
+func get_ammo_required() -> int:
+	return ammo_required[_current_ability]
