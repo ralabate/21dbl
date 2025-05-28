@@ -27,7 +27,7 @@ func _process(delta: float) -> void:
 
 	if _current_ability != previous:
 		var selected = abilities[_current_ability]
-		Log.info("New ability selected: [%s]" % selected)
+		Log.info("New ability selected: [%s]" % selected.resource_path)
 		selected_ability.emit(selected)
 
 

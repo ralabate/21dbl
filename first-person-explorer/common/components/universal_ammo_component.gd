@@ -12,6 +12,7 @@ func has_ammo(amount: int) -> bool:
 
 func add_ammo(amount: int) -> void:
 	self.amount += amount
+	amount_changed.emit(self.amount)
 
 
 func use_ammo(amount: int) -> void:
