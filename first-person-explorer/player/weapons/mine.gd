@@ -1,4 +1,4 @@
-extends Area3D
+extends StaticBody3D
 
 
 signal node_instantiated(node: Node3D, location: Vector3, direction: Vector3)
@@ -6,7 +6,9 @@ signal node_instantiated(node: Node3D, location: Vector3, direction: Vector3)
 @export var explosion_template: PackedScene
 @export var damage_amount: int
 
-@onready var timer = %Timer
+@onready var health_component: HealthComponent = %HealthComponent
+@onready var explosion_area: Area3D = %ExplosionArea
+@onready var animated_sprite: AnimatedSprite3D = %AnimatedSprite3D
 
 var damage_list = []
 
@@ -14,20 +16,21 @@ var damage_list = []
 func _ready() -> void:
 	InstantiationStation.register_instantiator(self)
 
-	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
-	timer.timeout.connect(_on_timer_timeout)
+	explosion_area.body_entered.connect(_on_body_entered_explosion_area)
+	explosion_area.body_exited.connect(_on_body_exited_explosion_area)
+
+	health_component.death.connect(_on_death)
 
 
-func _on_body_entered(node: Node3D) -> void:
+func _on_body_entered_explosion_area(node: Node3D) -> void:
 	damage_list.append(node)
 
 
-func _on_body_exited(node: Node3D) -> void:
+func _on_body_exited_explosion_area(node: Node3D) -> void:
 	damage_list.erase(node)
 
 
-func _on_timer_timeout() -> void:
+func _on_death() -> void:
 	for badguy in damage_list:
 		if badguy.has_node("HealthComponent"):
 			var health_component = badguy.get_node("HealthComponent") as HealthComponent
