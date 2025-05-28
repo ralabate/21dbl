@@ -288,5 +288,4 @@ double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_v3m80")
 animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.176696
+frame_progress = 0.240632

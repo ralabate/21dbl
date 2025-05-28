@@ -18,8 +18,10 @@ func _ready() -> void:
 
 	explosion_area.body_entered.connect(_on_body_entered_explosion_area)
 	explosion_area.body_exited.connect(_on_body_exited_explosion_area)
-
+	
 	health_component.death.connect(_on_death)
+
+	animated_sprite.play("idle")
 
 
 func _on_body_entered_explosion_area(node: Node3D) -> void:
