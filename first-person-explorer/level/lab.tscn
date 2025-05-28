@@ -3286,6 +3286,9 @@ transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 46.9, 2.
 speed = 500
 sprint_speed = 750
 
+[node name="UniversalAmmoComponent" parent="FirstPersonController" index="2"]
+amount = 100
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w72v2")
 
