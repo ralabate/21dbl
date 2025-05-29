@@ -3700,6 +3700,7 @@ transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, 6.4, 11,
 
 [node name="Door2" parent="Doors" instance=ExtResource("11_ji7rh")]
 transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, -30.3, 3, 0)
+required_key = 0
 
 [node name="Door3" parent="Doors" instance=ExtResource("11_ji7rh")]
 transform = Transform3D(-1, 0, 1.58933e-08, 0, 1, 0, -1.58933e-08, 0, -1, 50, 3, 10.2)

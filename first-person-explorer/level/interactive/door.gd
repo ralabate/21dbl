@@ -1,23 +1,29 @@
+@tool
 extends Area3D
 
 
-@export var required_key: DoorKey.Type = DoorKey.Type.NONE
+@export var required_key: DoorKey.Type = DoorKey.Type.NONE:
+	set(new_key):
+		required_key = new_key
+		update_door_color()
+
 @export var opening_speed: float = 1.0
 @export var open_once: bool = false
 
-@onready var animation_player = %AnimationPlayer
+@onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 var is_open: bool
 var body_list: Array[Node3D]
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 
 	animation_player.speed_scale = opening_speed
 	is_open = false
+
+	update_door_color()
 
 
 func wake() -> void:
@@ -31,6 +37,24 @@ func open() -> void:
 	if open_once:
 		await animation_player.animation_finished
 		queue_free()
+
+
+func update_door_color() -> void:
+	if has_node("%DoorMesh"):
+		var door_mesh = get_node("%DoorMesh")
+		var door_material = StandardMaterial3D.new()
+
+		match required_key:
+			DoorKey.Type.RED:
+				door_material.albedo_color = Color.RED
+			DoorKey.Type.YELLOW:
+				door_material.albedo_color = Color.YELLOW
+			DoorKey.Type.BLUE:
+				door_material.albedo_color = Color.BLUE
+			DoorKey.Type.NONE:
+				door_material.albedo_color = Color.DIM_GRAY
+
+		door_mesh.mesh.surface_set_material(0, door_material)
 
 
 func _on_body_entered(body: Node3D) -> void:

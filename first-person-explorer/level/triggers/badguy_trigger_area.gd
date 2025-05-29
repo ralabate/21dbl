@@ -10,7 +10,6 @@ extends Area3D
 @export var draw_lines_ingame = false
 @export var debug_line_color: Color
 
-
 var mesh_instances: Array[MeshInstance3D]
 var _triggered = false
 var line_material = StandardMaterial3D.new()

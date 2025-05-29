@@ -1,7 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmpfbiv6a0bm"]
 
 [ext_resource type="Script" uid="uid://btbxxp45rsllp" path="res://level/interactive/door.gd" id="1_ba8gm"]
-[ext_resource type="PackedScene" uid="uid://bdq3q88fd6jne" path="res://level/imported/scifi-door.glb" id="2_kdia8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hun61"]
 size = Vector3(4, 0.5, 4)
@@ -9,8 +8,13 @@ size = Vector3(4, 0.5, 4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_v6xrn"]
 size = Vector3(3, 3, 0.2)
 
-[sub_resource type="QuadMesh" id="QuadMesh_kdia8"]
-size = Vector2(0.25, 0.25)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4akoa"]
+albedo_color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3c7oy"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_4akoa")
+size = Vector3(3, 3, 0.2)
 
 [sub_resource type="Animation" id="Animation_v6xrn"]
 length = 0.001
@@ -63,16 +67,9 @@ debug_color = Color(1, 1, 0, 0.25098)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatableBody3D"]
 shape = SubResource("BoxShape3D_v6xrn")
 
-[node name="scifi-door" parent="AnimatableBody3D" instance=ExtResource("2_kdia8")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
-
-[node name="KeyColor" type="MeshInstance3D" parent="AnimatableBody3D/scifi-door"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.2, -0.139943, 0.656062)
-mesh = SubResource("QuadMesh_kdia8")
-
-[node name="KeyColor2" type="MeshInstance3D" parent="AnimatableBody3D/scifi-door"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.2, -0.139802, 0.65507)
-mesh = SubResource("QuadMesh_kdia8")
+[node name="DoorMesh" type="MeshInstance3D" parent="AnimatableBody3D"]
+unique_name_in_owner = true
+mesh = SubResource("BoxMesh_3c7oy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
