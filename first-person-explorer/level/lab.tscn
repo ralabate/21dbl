@@ -1,4 +1,4 @@
-[gd_scene load_steps=607 format=4 uid="uid://cavfltm6pdmnq"]
+[gd_scene load_steps=610 format=4 uid="uid://cavfltm6pdmnq"]
 
 [ext_resource type="Script" uid="uid://d16wf7mv38fpx" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_ue50r"]
 [ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_ckmc6"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://17qm3tooj34w" path="res://level/triggers/badguy_trigger_area.tscn" id="11_3ypoi"]
 [ext_resource type="PackedScene" uid="uid://dmpfbiv6a0bm" path="res://level/interactive/door.tscn" id="11_ji7rh"]
 [ext_resource type="PackedScene" uid="uid://bgvnnk8ambbxi" path="res://badguys/slime.tscn" id="13_8xnn3"]
+[ext_resource type="PackedScene" uid="uid://canar5qot5j80" path="res://level/interactive/trap_door.tscn" id="13_xv3me"]
 [ext_resource type="PackedScene" uid="uid://c1u857uxt74dr" path="res://badguys/eyeball.tscn" id="14_f1iti"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_s65ib"]
@@ -1879,11 +1880,17 @@ background_mode = 1
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3gkp2"]
+size = Vector3(23, 4, 0.2)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2mudg"]
+size = Vector3(23, 4, 0.2)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_8xnn3"]
 size = Vector3(3, 1, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f1iti"]
-size = Vector3(1, 1, 5)
+size = Vector3(18.5, 1, 28.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_y0yan"]
 size = Vector3(4, 1, 1)
@@ -3697,6 +3704,18 @@ transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, -30.3, 3
 [node name="Door3" parent="Doors" instance=ExtResource("11_ji7rh")]
 transform = Transform3D(-1, 0, 1.58933e-08, 0, 1, 0, -1.58933e-08, 0, -1, 50, 3, 10.2)
 
+[node name="TrapDoor" parent="Doors" instance=ExtResource("13_xv3me")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3, 26.2)
+opening_speed = 1.0
+
+[node name="CollisionShape3D" parent="Doors/TrapDoor/AnimatableBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_3gkp2")
+
+[node name="MeshInstance3D" parent="Doors/TrapDoor/AnimatableBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_2mudg")
+
 [node name="Lights" type="Node" parent="."]
 
 [node name="Triggers" type="Node" parent="."]
@@ -3710,11 +3729,12 @@ debug_line_color = Color(1, 0, 0, 1)
 shape = SubResource("BoxShape3D_8xnn3")
 
 [node name="NodeTriggerArea2" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 3.5, 0)
-node_list = [NodePath("../../Badguys/Eyeball"), NodePath("../../Badguys/Eyeball2"), NodePath("../../Badguys/Eyeball3"), NodePath("../../Badguys/Eyeball4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8, 3.5, 0)
+node_list = [NodePath("../../Badguys/Eyeball"), NodePath("../../Badguys/Eyeball2"), NodePath("../../Badguys/Eyeball3"), NodePath("../../Badguys/Eyeball4"), NodePath("../../Doors/TrapDoor")]
 debug_line_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape3D" parent="Triggers/NodeTriggerArea2" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0, 11.75)
 shape = SubResource("BoxShape3D_f1iti")
 
 [node name="NodeTriggerArea3" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
@@ -3788,6 +3808,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.6, 10.5, -1.1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 10.5, 0.7)
 
 [editable path="FirstPersonController"]
+[editable path="Doors/TrapDoor"]
 [editable path="Triggers/NodeTriggerArea"]
 [editable path="Triggers/NodeTriggerArea2"]
 [editable path="Triggers/NodeTriggerArea3"]
