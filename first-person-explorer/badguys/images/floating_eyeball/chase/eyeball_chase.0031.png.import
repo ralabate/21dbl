@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhksnu8b6wg4r"
-path.s3tc="res://.godot/imported/eyeball_chase.0031.png-32432b143f176cf064dcea6e98712e6c.s3tc.ctex"
+path="res://.godot/imported/eyeball_chase.0031.png-32432b143f176cf064dcea6e98712e6c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://badguys/images/floating_eyeball/chase/eyeball_chase.0031.png"
-dest_files=["res://.godot/imported/eyeball_chase.0031.png-32432b143f176cf064dcea6e98712e6c.s3tc.ctex"]
+dest_files=["res://.godot/imported/eyeball_chase.0031.png-32432b143f176cf064dcea6e98712e6c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

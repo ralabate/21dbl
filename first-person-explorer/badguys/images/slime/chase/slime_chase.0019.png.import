@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cg8k3pwcjpmj5"
-path.s3tc="res://.godot/imported/slime_chase.0019.png-49194b644e52489a51ab0a8bd62a9217.s3tc.ctex"
+path="res://.godot/imported/slime_chase.0019.png-49194b644e52489a51ab0a8bd62a9217.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://badguys/images/slime/chase/slime_chase.0019.png"
-dest_files=["res://.godot/imported/slime_chase.0019.png-49194b644e52489a51ab0a8bd62a9217.s3tc.ctex"]
+dest_files=["res://.godot/imported/slime_chase.0019.png-49194b644e52489a51ab0a8bd62a9217.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

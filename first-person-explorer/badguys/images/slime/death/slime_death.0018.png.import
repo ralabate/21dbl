@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmwcf4xl5drkp"
-path.s3tc="res://.godot/imported/slime_death.0018.png-1cf6d8dc62b7d0c90a5bc85b208f09aa.s3tc.ctex"
+path="res://.godot/imported/slime_death.0018.png-1cf6d8dc62b7d0c90a5bc85b208f09aa.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://badguys/images/slime/death/slime_death.0018.png"
-dest_files=["res://.godot/imported/slime_death.0018.png-1cf6d8dc62b7d0c90a5bc85b208f09aa.s3tc.ctex"]
+dest_files=["res://.godot/imported/slime_death.0018.png-1cf6d8dc62b7d0c90a5bc85b208f09aa.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
