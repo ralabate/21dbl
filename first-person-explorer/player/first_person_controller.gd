@@ -31,6 +31,8 @@ func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	health_component.damage_received.connect(_on_damage_received)
+	health_component.death.connect(_on_death)
+
 	ability_inventory.selected_ability.connect(_on_ability_selected)
 	key_inventory_component.key_acquired.connect(_on_key_acquired)
 	uni_ammo_component.amount_changed.connect(_on_ammo_amount_changed)
@@ -103,6 +105,10 @@ func _on_damage_received(amount: int) -> void:
 	await get_tree().create_timer(0.1).timeout
 	hurt_flash.visible = false
 	update_health_bar_value()
+
+
+func _on_death() -> void:
+	get_tree().reload_current_scene.call_deferred()
 
 
 func _on_weapon_fired() -> void:

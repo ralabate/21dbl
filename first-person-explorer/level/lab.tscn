@@ -3672,7 +3672,7 @@ shape = SubResource("ConvexPolygonShape3D_mxa11")
 shape = SubResource("ConvexPolygonShape3D_sco2r")
 
 [node name="FirstPersonController" parent="." instance=ExtResource("4_g50wv")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 80.1, 2.4, -31)
+transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 87.7, 10.4, 0.4)
 speed = 500
 sprint_speed = 750
 
