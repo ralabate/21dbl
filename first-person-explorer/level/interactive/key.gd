@@ -32,5 +32,4 @@ func _on_body_entered(body: Node3D) -> void:
 		var key_inventory = body.get_node("KeyInventoryComponent") as KeyInventoryComponent
 		key_inventory.add_key(type)
 		Log.info("Picked up key: [%s]" % type)
-
-	queue_free()
+		queue_free()

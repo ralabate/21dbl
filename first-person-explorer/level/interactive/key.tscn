@@ -1,4 +1,4 @@
-[gd_scene load_steps=184 format=3 uid="uid://b178sxgv7g7lk"]
+[gd_scene load_steps=185 format=3 uid="uid://b178sxgv7g7lk"]
 
 [ext_resource type="Script" uid="uid://6my74ex8112r" path="res://level/interactive/key.gd" id="1_up4cr"]
 [ext_resource type="Texture2D" uid="uid://dcqepmc50vsuq" path="res://level/keycard/keycard_blue.0001.png" id="3_5bup0"]
@@ -60,6 +60,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ybs3m15q6n5" path="res://level/keycard/keycard_blue.0057.png" id="59_dlq1b"]
 [ext_resource type="Texture2D" uid="uid://cic17rtyh64j" path="res://level/keycard/keycard_blue.0058.png" id="60_o8mt6"]
 [ext_resource type="Texture2D" uid="uid://cjsd5dhi37uov" path="res://level/keycard/keycard_blue.0059.png" id="61_382d7"]
+[ext_resource type="Texture2D" uid="uid://dw1ehubdl1cp" path="res://level/images/keys/none-keycard.png" id="62_1nm0b"]
 [ext_resource type="Texture2D" uid="uid://1vfwhaaesbno" path="res://level/keycard/keycard_red.0001.png" id="62_22mt2"]
 [ext_resource type="Texture2D" uid="uid://dmjwn88td4x2d" path="res://level/keycard/keycard_blue.0060.png" id="62_lg8vs"]
 [ext_resource type="Texture2D" uid="uid://evxk6h4u0gg6" path="res://level/keycard/keycard_red.0002.png" id="63_1nm0b"]
@@ -370,6 +371,14 @@ animations = [{
 "loop": true,
 "name": &"blue",
 "speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_1nm0b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -755,5 +764,3 @@ billboard = 1
 double_sided = false
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_5rxqu")
-animation = &"yellow"
-frame_progress = 0.413533
