@@ -6,7 +6,6 @@
 "wad" ""
 "classname" "worldspawn"
 "_tb_layer_locked" "1"
-"_tb_layer_hidden" "1"
 }
 // entity 1
 {
@@ -16,7 +15,6 @@
 "_tb_id" "42"
 "_tb_layer_sort_index" "0"
 "_tb_layer_locked" "1"
-"_tb_layer_hidden" "1"
 // brush 0
 {
 ( -1472 1584 32 ) ( -1472 1585 32 ) ( -1472 1584 33 ) special/clip [ 0 -1 0 0 ] [ 0 0 -1 32 ] 90 1 1
@@ -2431,7 +2429,6 @@
 "_tb_id" "77"
 "_tb_layer_sort_index" "1"
 "_tb_layer_locked" "1"
-"_tb_layer_hidden" "1"
 // brush 0
 {
 ( -1472 2640 32 ) ( -1472 2641 32 ) ( -1472 2640 33 ) special/clip [ 0 -1 0 -32 ] [ 0 0 -1 32 ] 90 1 1
@@ -4990,7 +4987,6 @@
 "_tb_id" "79"
 "_tb_layer_sort_index" "3"
 "_tb_layer_locked" "1"
-"_tb_layer_hidden" "1"
 // brush 0
 {
 ( -832 -576 0 ) ( -832 -575 0 ) ( -832 -576 1 ) special/default_texture [ 0 -1 0 0 ] [ 0 0 -1 0 ] 0 1 1
@@ -5488,6 +5484,7 @@
 "_tb_name" "Warehouse"
 "_tb_id" "84"
 "_tb_layer_sort_index" "4"
+"_tb_layer_locked" "1"
 // brush 0
 {
 ( 336 1216 16 ) ( 336 1217 16 ) ( 336 1216 17 ) special/default_texture [ 0 -1 0 0 ] [ 0 0 -1 -16 ] 0 1 1
