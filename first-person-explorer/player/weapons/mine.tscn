@@ -1,7 +1,7 @@
 [gd_scene load_steps=67 format=3 uid="uid://brnxv2baowehj"]
 
 [ext_resource type="Script" uid="uid://bs6f774rygn3c" path="res://player/weapons/mine.gd" id="1_iuis7"]
-[ext_resource type="PackedScene" uid="uid://c0wxsm0j6nvqy" path="res://player/weapons/vfx/mine_explosion.tscn" id="2_5esde"]
+[ext_resource type="PackedScene" uid="uid://dqdbukk1qgu" path="res://player/weapons/vfx/explosion.tscn" id="2_rth3h"]
 [ext_resource type="Texture2D" uid="uid://oa373ppexlen" path="res://level/barrel/barrel.0001.png" id="3_vr1vs"]
 [ext_resource type="Texture2D" uid="uid://b317oflsc5ckp" path="res://level/barrel/barrel.0002.png" id="4_rth3h"]
 [ext_resource type="Texture2D" uid="uid://cbj8o3py2hit3" path="res://level/barrel/barrel.0003.png" id="5_dw55i"]
@@ -262,7 +262,7 @@ animations = [{
 collision_layer = 4
 collision_mask = 14
 script = ExtResource("1_iuis7")
-explosion_template = ExtResource("2_5esde")
+explosion_template = ExtResource("2_rth3h")
 damage_amount = 10
 
 [node name="HealthComponent" type="Node" parent="."]
