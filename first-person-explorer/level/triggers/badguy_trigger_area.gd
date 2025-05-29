@@ -62,6 +62,8 @@ func draw_line(idx: int, from: Vector3, to: Vector3) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	if not _triggered and body.is_in_group("player"):
 		for node in node_list:
+			if node == null or node.is_queued_for_deletion():
+				continue
 			if node.has_method("wake"):
 				node.wake()
 			_triggered = true
