@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://c1u857uxt74dr"]
+[gd_scene load_steps=114 format=3 uid="uid://c1u857uxt74dr"]
 
 [ext_resource type="Script" uid="uid://clhircl18kdhh" path="res://badguys/badguy.gd" id="1_7cur0"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_vaenl"]
@@ -11,11 +11,14 @@
 [ext_resource type="Script" uid="uid://bbx03qgt7jwev" path="res://badguys/states/badguy_attack_state.gd" id="8_lrgww"]
 [ext_resource type="Script" uid="uid://dmrpfrb334jim" path="res://badguys/states/badguy_hurt_state.gd" id="9_njl5e"]
 [ext_resource type="Script" uid="uid://mgr8rmq8nlia" path="res://badguys/states/badguy_death_state.gd" id="10_ahxo4"]
-[ext_resource type="Texture2D" uid="uid://c4qfulbe61akl" path="res://badguys/images/slime/attack/slime_attack.0001.png" id="11_42emt"]
+[ext_resource type="Texture2D" uid="uid://ble631ykcqwah" path="res://badguys/images/floating_eyeball/attack/floating_eyeball_attack.0001.png" id="12_ihh4s"]
 [ext_resource type="Texture2D" uid="uid://btc5ul7jin6ds" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0001.png" id="12_r26an"]
+[ext_resource type="Texture2D" uid="uid://ccot8vq3qdhm6" path="res://badguys/images/floating_eyeball/attack/floating_eyeball_attack.0002.png" id="13_nwqdj"]
 [ext_resource type="Texture2D" uid="uid://bfdbiyo12p5wq" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0002.png" id="13_x32sg"]
 [ext_resource type="Texture2D" uid="uid://06jrfkpe32y6" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0003.png" id="14_6pyap"]
+[ext_resource type="Texture2D" uid="uid://deon05ga68778" path="res://badguys/images/floating_eyeball/attack/floating_eyeball_attack.0003.png" id="14_sbfx0"]
 [ext_resource type="Texture2D" uid="uid://y70ouxahojpc" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0004.png" id="15_61kl3"]
+[ext_resource type="Texture2D" uid="uid://qhk4ur4tbotr" path="res://badguys/images/floating_eyeball/attack/floating_eyeball_attack.0004.png" id="15_o6og6"]
 [ext_resource type="Texture2D" uid="uid://j1tgxmp36b2u" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0005.png" id="16_rppms"]
 [ext_resource type="Texture2D" uid="uid://by1t584g5af4r" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0006.png" id="17_1ihkm"]
 [ext_resource type="Texture2D" uid="uid://bndb538ywj2qy" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0007.png" id="18_u30xb"]
@@ -72,7 +75,6 @@
 [ext_resource type="Texture2D" uid="uid://cooudcawm7aib" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0058.png" id="69_rnv2q"]
 [ext_resource type="Texture2D" uid="uid://cfokb75qpvubo" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0059.png" id="70_ocnme"]
 [ext_resource type="Texture2D" uid="uid://ckdi5jmh3jbwt" path="res://badguys/images/floating_eyeball/chase/eyeball_chase.0060.png" id="71_iiyf4"]
-[ext_resource type="Texture2D" uid="uid://cww1ryeqpoylj" path="res://badguys/images/slime/hurt/slime_hurt.0001.png" id="72_br4pb"]
 [ext_resource type="Texture2D" uid="uid://bhjshtkrm12wb" path="res://badguys/images/floating_eyeball/death/eyeball_death.0001.png" id="72_u8g31"]
 [ext_resource type="Texture2D" uid="uid://ci8kcucos3wod" path="res://badguys/images/floating_eyeball/death/eyeball_death.0002.png" id="73_yyym0"]
 [ext_resource type="Texture2D" uid="uid://musr8ovnx725" path="res://badguys/images/floating_eyeball/death/eyeball_death.0003.png" id="74_qdgw3"]
@@ -103,6 +105,10 @@
 [ext_resource type="Texture2D" uid="uid://diq8pjk5enfb7" path="res://badguys/images/floating_eyeball/death/eyeball_death.0028.png" id="99_mntut"]
 [ext_resource type="Texture2D" uid="uid://b4cqerx6hgmbc" path="res://badguys/images/floating_eyeball/death/eyeball_death.0029.png" id="100_77w11"]
 [ext_resource type="Texture2D" uid="uid://doifco6h0pkh5" path="res://badguys/images/floating_eyeball/death/eyeball_death.0030.png" id="101_msgvk"]
+[ext_resource type="Texture2D" uid="uid://d2y6p8liwfxip" path="res://badguys/images/floating_eyeball/hurt/floating_eyeball_hurt.0001.png" id="106_qmn2j"]
+[ext_resource type="Texture2D" uid="uid://cyems4suwru6e" path="res://badguys/images/floating_eyeball/hurt/floating_eyeball_hurt.0002.png" id="107_k66e1"]
+[ext_resource type="Texture2D" uid="uid://b22nopa31s5vk" path="res://badguys/images/floating_eyeball/hurt/floating_eyeball_hurt.0003.png" id="108_yaht2"]
+[ext_resource type="Texture2D" uid="uid://csx8n3dht2ndq" path="res://badguys/images/floating_eyeball/hurt/floating_eyeball_hurt.0004.png" id="109_maqf7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bug4s"]
 
@@ -115,7 +121,16 @@ points = PackedVector3Array(0, 0, 0, 3, 0, 7, -3, 0, 7)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_42emt")
+"texture": ExtResource("12_ihh4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nwqdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sbfx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_o6og6")
 }],
 "loop": false,
 "name": &"attack",
@@ -403,7 +418,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("72_br4pb")
+"texture": ExtResource("106_qmn2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_k66e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_yaht2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_maqf7")
 }],
 "loop": false,
 "name": &"hurt",
@@ -504,4 +528,6 @@ shaded = true
 double_sided = false
 texture_filter = 2
 sprite_frames = SubResource("SpriteFrames_qwje0")
-animation = &"idle"
+animation = &"hurt"
+frame = 3
+frame_progress = 1.0
