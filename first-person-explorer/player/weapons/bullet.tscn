@@ -3,11 +3,12 @@
 [ext_resource type="Script" uid="uid://cjv5dso0dv240" path="res://player/weapons/bullet.gd" id="1_v7oki"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1y6ct"]
-albedo_color = Color(1, 0, 0, 1)
+shading_mode = 0
 
 [sub_resource type="SphereMesh" id="SphereMesh_v8qja"]
 material = SubResource("StandardMaterial3D_1y6ct")
-radius = 1.0
+radius = 0.25
+height = 2.0
 radial_segments = 16
 rings = 8
 is_hemisphere = true
@@ -25,7 +26,8 @@ initial_velocity_max = 2.0
 gravity = Vector3(0, 0, 0)
 scale_min = 0.1
 scale_max = 0.5
-color = Color(1, 0, 0.298039, 1)
+hue_variation_min = -0.25
+hue_variation_max = 0.25
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v7oki"]
 shading_mode = 0
