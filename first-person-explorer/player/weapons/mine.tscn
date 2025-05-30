@@ -259,8 +259,7 @@ animations = [{
 }]
 
 [node name="Mine" type="StaticBody3D"]
-collision_layer = 4
-collision_mask = 14
+collision_mask = 6
 script = ExtResource("1_iuis7")
 explosion_template = ExtResource("2_rth3h")
 damage_amount = 10
@@ -276,6 +275,7 @@ shape = SubResource("SphereShape3D_rth3h")
 
 [node name="ExplosionArea" type="Area3D" parent="."]
 unique_name_in_owner = true
+collision_mask = 6
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExplosionArea"]
 shape = SubResource("CylinderShape3D_ho4jl")
