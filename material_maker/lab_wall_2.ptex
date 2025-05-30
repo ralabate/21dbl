@@ -1,0 +1,221 @@
+{
+	"connections": [
+		{
+			"from": "sdroundedx",
+			"from_port": 0,
+			"to": "sdshow",
+			"to_port": 0
+		},
+		{
+			"from": "sdshow",
+			"from_port": 0,
+			"to": "tiler",
+			"to_port": 0
+		},
+		{
+			"from": "tiler",
+			"from_port": 0,
+			"to": "invert",
+			"to_port": 0
+		},
+		{
+			"from": "noise_white",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 3
+		},
+		{
+			"from": "invert",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 1
+		},
+		{
+			"from": "tiler",
+			"from_port": 0,
+			"to": "colorize",
+			"to_port": 0
+		},
+		{
+			"from": "colorize",
+			"from_port": 0,
+			"to": "blend2",
+			"to_port": 5
+		},
+		{
+			"from": "blend2",
+			"from_port": 0,
+			"to": "Material",
+			"to_port": 0
+		}
+	],
+	"label": "Graph",
+	"longdesc": "",
+	"name": "@Node@705",
+	"node_position": {
+		"x": 0.0,
+		"y": 0.0
+	},
+	"nodes": [
+		{
+			"export_paths": {
+
+			},
+			"name": "Material",
+			"node_position": {
+				"x": 606.969116210938,
+				"y": 325.498718261719
+			},
+			"parameters": {
+				"albedo_color": {
+					"a": 1.0,
+					"b": 1.0,
+					"g": 1.0,
+					"r": 1.0,
+					"type": "Color"
+				},
+				"ao": 1.0,
+				"depth_scale": 0.5,
+				"emission_energy": 1.0,
+				"flags_transparent": true,
+				"metallic": 0.0,
+				"normal": 1.0,
+				"roughness": 1.0,
+				"size": 11,
+				"sss": 1.0
+			},
+			"seed_int": 0,
+			"type": "material"
+		},
+		{
+			"name": "sdroundedx",
+			"node_position": {
+				"x": -854.743774414062,
+				"y": 397.442932128906
+			},
+			"parameters": {
+				"cx": 0.0,
+				"cy": 0.0,
+				"r": 0.05,
+				"w": 0.5
+			},
+			"seed_int": 0,
+			"type": "sdroundedx"
+		},
+		{
+			"name": "sdshow",
+			"node_position": {
+				"x": -569.364501953125,
+				"y": 318.496765136719
+			},
+			"parameters": {
+				"base": 0.06,
+				"bevel": 0.06
+			},
+			"seed_int": 0,
+			"type": "sdshow"
+		},
+		{
+			"name": "tiler",
+			"node_position": {
+				"x": -333.234008789062,
+				"y": 349.066589355469
+			},
+			"parameters": {
+				"fixed_offset": 0.0,
+				"inputs": 0.0,
+				"offset": 0.0,
+				"overlap": 0.0,
+				"rotate": 0.0,
+				"scale": 0.0,
+				"scale_x": 1.0,
+				"scale_y": 1.0,
+				"tx": 2.0,
+				"ty": 2.0,
+				"value": 0.0,
+				"variations": false
+			},
+			"seed_int": 0,
+			"type": "tiler"
+		},
+		{
+			"name": "invert",
+			"node_position": {
+				"x": -46.2188110351562,
+				"y": 220.444366455078
+			},
+			"parameters": {
+
+			},
+			"seed_int": 0,
+			"type": "invert"
+		},
+		{
+			"name": "noise_white",
+			"node_position": {
+				"x": -47.2387199401855,
+				"y": 358.876556396484
+			},
+			"parameters": {
+				"size": 7
+			},
+			"seed_int": 0,
+			"type": "noise_white"
+		},
+		{
+			"generic_size": 3,
+			"name": "blend2",
+			"node_position": {
+				"x": 275.701080322266,
+				"y": 322.538208007812
+			},
+			"parameters": {
+				"amount1": 1.0,
+				"amount2": 0.05,
+				"amount3": 1.0,
+				"blend_type1": 0.0,
+				"blend_type2": 2,
+				"blend_type3": 4
+			},
+			"seed_int": 0,
+			"type": "blend2"
+		},
+		{
+			"name": "colorize",
+			"node_position": {
+				"x": -46.1842651367188,
+				"y": 476.721313476562
+			},
+			"parameters": {
+				"gradient": {
+					"interpolation": 1,
+					"points": [
+						{
+							"a": 0.0,
+							"b": 0.0,
+							"g": 0.0,
+							"pos": 0.0,
+							"r": 0.0
+						},
+						{
+							"a": 1.0,
+							"b": 0.883333444595337,
+							"g": 1.0,
+							"pos": 1.0,
+							"r": 0.0
+						}
+					],
+					"type": "Gradient"
+				}
+			},
+			"seed_int": 0,
+			"type": "colorize"
+		}
+	],
+	"parameters": {
+
+	},
+	"seed_int": 0,
+	"shortdesc": "",
+	"type": "graph"
+}
