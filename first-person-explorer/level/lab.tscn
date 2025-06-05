@@ -4278,10 +4278,6 @@ metadata/_edit_lock_ = true
 [node name="HUD" parent="FirstPersonController" index="8"]
 metadata/_edit_lock_ = true
 
-[node name="WeaponSprite" parent="FirstPersonController/HUD" index="1"]
-frame = 0
-frame_progress = 0.0
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_w72v2")
 
@@ -4315,24 +4311,20 @@ mesh = SubResource("BoxMesh_2mudg")
 [node name="NodeTriggerArea" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 3.5, 0)
 node_list = [NodePath("../../Badguys/Slime"), NodePath("../../Badguys/Slime2"), NodePath("../../Badguys/Slime3"), NodePath("../../Badguys/Slime4")]
-debug_line_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape3D" parent="Triggers/NodeTriggerArea" index="0"]
 shape = SubResource("BoxShape3D_8xnn3")
 
 [node name="NodeTriggerArea2" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.8, 3.5, 0)
-node_list = [NodePath("../../Badguys/Eyeball"), NodePath("../../Badguys/Eyeball2"), NodePath("../../Badguys/Eyeball3"), NodePath("../../Badguys/Eyeball4"), NodePath("../../Doors/TrapDoor")]
-debug_line_color = Color(1, 0, 0, 1)
+node_list = [NodePath("../../Doors/TrapDoor"), NodePath("../../Badguys/Eyeball"), NodePath("../../Badguys/Eyeball2"), NodePath("../../Badguys/Eyeball3"), NodePath("../../Badguys/Eyeball4")]
 
 [node name="CollisionShape3D" parent="Triggers/NodeTriggerArea2" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0, 11.75)
 shape = SubResource("BoxShape3D_f1iti")
 
-[node name="NodeTriggerArea3" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
+[node name="NodeTriggerArea3" parent="Triggers" instance=ExtResource("11_3ypoi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 11)
-node_list = [NodePath("../../Badguys/Slime9"), NodePath("../../Badguys/Slime8"), NodePath("../../Badguys/Slime6"), NodePath("../../Badguys/Slime5"), NodePath("../../Badguys/Eyeball5"), NodePath("../../Badguys/Eyeball6")]
-debug_line_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape3D" parent="Triggers/NodeTriggerArea3" index="0"]
 shape = SubResource("BoxShape3D_y0yan")
@@ -4340,7 +4332,6 @@ shape = SubResource("BoxShape3D_y0yan")
 [node name="NodeTriggerArea4" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.3, 10, 0)
 node_list = [NodePath("../../Badguys/Slime7"), NodePath("../../Badguys/Slime10"), NodePath("../../Badguys/Slime11")]
-debug_line_color = Color(1, 0, 0, 1)
 
 [node name="CollisionShape3D" parent="Triggers/NodeTriggerArea4" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.17233e-07)

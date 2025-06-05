@@ -17,7 +17,6 @@ signal death(location: Vector3)
 
 var is_moving = false
 var movement_direction: Vector3
-#var player: Node3D
 
 
 func _ready():

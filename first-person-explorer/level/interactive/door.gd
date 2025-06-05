@@ -1,5 +1,5 @@
 @tool
-extends Area3D
+class_name Door extends Area3D
 
 
 @export var required_key: DoorKey.Type = DoorKey.Type.NONE:
@@ -17,6 +17,8 @@ var body_list: Array[Node3D]
 
 
 func _ready() -> void:
+	add_to_group("triggerable")
+
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 

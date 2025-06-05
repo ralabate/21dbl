@@ -8,7 +8,9 @@ extends Area3D
 		build_meshes()
 
 @export var draw_lines_ingame = false
-@export var debug_line_color: Color
+@export var default_line_color = Color.MAGENTA
+@export var badguy_line_color = Color.RED
+@export var door_line_color = Color.AQUAMARINE
 
 var mesh_instances: Array[MeshInstance3D]
 var _triggered = false
@@ -34,7 +36,15 @@ func draw_all_lines() -> void:
 		if node:
 			var from = Vector3.ZERO
 			var to = node.global_position - self.global_position
-			draw_line(idx, from, to)
+			var immediate_mesh = mesh_instances[idx].mesh as ImmediateMesh
+			var color = default_line_color
+
+			if node is Badguy:
+				color = badguy_line_color
+			elif node is Door:
+				color = door_line_color
+
+			draw_line(immediate_mesh, from, to, color)
 
 
 func build_meshes() -> void:
@@ -49,14 +59,13 @@ func build_meshes() -> void:
 		add_child(mesh_instance)
 
 
-func draw_line(idx: int, from: Vector3, to: Vector3) -> void:
-	var immediate_mesh = mesh_instances[idx].mesh as ImmediateMesh
-	immediate_mesh.clear_surfaces()
-	immediate_mesh.surface_begin(Mesh.PRIMITIVE_LINES, line_material)
-	immediate_mesh.surface_set_color(debug_line_color)
-	immediate_mesh.surface_add_vertex(from)
-	immediate_mesh.surface_add_vertex(to)
-	immediate_mesh.surface_end()
+func draw_line(mesh: ImmediateMesh, from: Vector3, to: Vector3, color: Color) -> void:
+	mesh.clear_surfaces()
+	mesh.surface_begin(Mesh.PRIMITIVE_LINES, line_material)
+	mesh.surface_set_color(color)
+	mesh.surface_add_vertex(from)
+	mesh.surface_add_vertex(to)
+	mesh.surface_end()
 
 
 func _on_body_entered(body: Node3D) -> void:
