@@ -2,7 +2,6 @@ extends Control
 class_name HUD
 
 
-# TODO: Move UI stuff out of here.
 @onready var weapon_sprite: AnimatedSprite2D = %WeaponSprite
 @onready var hurt_flash: ColorRect = %HurtFlashRect
 @onready var health_bar: ProgressBar = %HealthBar

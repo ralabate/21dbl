@@ -6,7 +6,6 @@ signal navigation_started
 signal navigation_stopped
 signal next_position(position: Vector3)
 
-# TODO: This should be in code and not exported.
 @export var navigation_agent: NavigationAgent3D
 
 var target: Node3D
