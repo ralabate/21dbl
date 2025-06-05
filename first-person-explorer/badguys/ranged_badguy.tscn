@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ctdnxye4y5ikp" path="res://badguys/images/energy-alien/energy-alien-walk-2.png" id="8_tbdhc"]
 [ext_resource type="Script" uid="uid://cuiwxj3wnoqag" path="res://common/components/navigation_component.gd" id="9_e88ha"]
 [ext_resource type="Texture2D" uid="uid://d4hxxmkn4spf8" path="res://badguys/images/energy-alien/energy-alien-walk-3.png" id="9_mldws"]
-[ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/fsm_component.gd" id="9_x3sma"]
+[ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/state/fsm_component.gd" id="9_x3sma"]
 [ext_resource type="Script" uid="uid://c3mha4eajluii" path="res://badguys/states/badguy_idle_state.gd" id="10_e88ha"]
 [ext_resource type="Script" uid="uid://cdsndtjjy64gx" path="res://badguys/states/badguy_chase_state.gd" id="11_f867n"]
 [ext_resource type="Texture2D" uid="uid://d244elgcdnvp3" path="res://badguys/images/energy-alien/energy-alien-death-0.png" id="11_yr8fq"]

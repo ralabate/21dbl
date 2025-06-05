@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_vaenl"]
 [ext_resource type="Script" uid="uid://cuiwxj3wnoqag" path="res://common/components/navigation_component.gd" id="3_8tjlb"]
 [ext_resource type="Script" uid="uid://tb00nu6v8wu2" path="res://common/components/ranged_attack_component.gd" id="4_x32sg"]
-[ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/fsm_component.gd" id="5_6l6r4"]
+[ext_resource type="Script" uid="uid://d3w1w02heo866" path="res://common/components/state/fsm_component.gd" id="5_6l6r4"]
 [ext_resource type="PackedScene" uid="uid://ccha1k3c1jk0d" path="res://badguys/bullet/badguy_bullet.tscn" id="5_6pyap"]
 [ext_resource type="Script" uid="uid://c3mha4eajluii" path="res://badguys/states/badguy_idle_state.gd" id="6_135te"]
 [ext_resource type="Script" uid="uid://cdsndtjjy64gx" path="res://badguys/states/badguy_chase_state.gd" id="7_r1c6p"]
