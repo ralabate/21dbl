@@ -40,6 +40,8 @@ func _ready() -> void:
 	trigger_fire_component.ability_template = ability_inventory.get_current_ability()
 
 	default_camera_pos = camera.position
+
+	hud.set_health_bar_value(float(health_component.current_health) / health_component.MAX_HEALTH)
 	hud.set_ability_text(trigger_fire_component.ability_template.resource_path)
 	hud.set_ammo(uni_ammo_component.amount)
 
