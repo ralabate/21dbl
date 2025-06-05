@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ddmhpwm0ovxkb" path="res://badguys/tv.tscn" id="2_qtybr"]
 [ext_resource type="PackedScene" uid="uid://bb66s3pjp42pv" path="res://player/power_pill.tscn" id="3_g7ks0"]
-[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/first_person_controller.tscn" id="7_xvgw2"]
+[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/player.tscn" id="7_xvgw2"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_s65ib"]
 vertices = PackedVector3Array(-4.25, 2.5, -13.35, -4.25, 2.5, -5.35, 4.5, 2.5, -5.35, 4.5, 2.5, -13.35, -4.25, -0.5, -4.35, -4.25, -0.5, 4.4, 4.5, -0.5, 4.4, 4.5, -0.5, -4.35)

@@ -6,7 +6,7 @@
 [ext_resource type="Material" uid="uid://c1gdhte2axvj5" path="res://level/textures/lab/lab_floor.tres" id="3_s1xne"]
 [ext_resource type="Material" uid="uid://dqum00vjycgbt" path="res://level/textures/lab/lab_cabinet.tres" id="4_00awp"]
 [ext_resource type="Material" uid="uid://c0sbtxbi1e2b6" path="res://level/textures/lab/lab_ceiling.tres" id="4_ckmc6"]
-[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/first_person_controller.tscn" id="4_g50wv"]
+[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/player.tscn" id="4_g50wv"]
 [ext_resource type="Material" uid="uid://dd7f01oo7wuyh" path="res://level/textures/lab/lab_wall.tres" id="5_s1xne"]
 [ext_resource type="Material" uid="uid://cktuko7y5pes" path="res://level/textures/lab/lab_tabletop.tres" id="8_ji7rh"]
 [ext_resource type="Material" uid="uid://cvlju83s3kigd" path="res://level/textures/lab/lab_wall_computer.tres" id="9_ji7rh"]

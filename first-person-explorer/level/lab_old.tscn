@@ -9,7 +9,7 @@
 [ext_resource type="Material" uid="uid://cvlju83s3kigd" path="res://level/textures/lab/lab_wall_computer.tres" id="7_xosux"]
 [ext_resource type="Material" uid="uid://cktuko7y5pes" path="res://level/textures/lab/lab_tabletop.tres" id="8_go4i4"]
 [ext_resource type="Material" uid="uid://dqum00vjycgbt" path="res://level/textures/lab/lab_cabinet.tres" id="9_7ljkb"]
-[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/first_person_controller.tscn" id="10_yoht1"]
+[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/player.tscn" id="10_yoht1"]
 [ext_resource type="PackedScene" uid="uid://dmpfbiv6a0bm" path="res://level/interactive/door.tscn" id="11_vv22s"]
 [ext_resource type="PackedScene" uid="uid://canar5qot5j80" path="res://level/interactive/trap_door.tscn" id="12_v8u3g"]
 [ext_resource type="PackedScene" uid="uid://17qm3tooj34w" path="res://level/triggers/badguy_trigger_area.tscn" id="13_s0k45"]
