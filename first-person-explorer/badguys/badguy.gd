@@ -52,10 +52,10 @@ func _physics_process(delta):
 
 func trigger() -> void:
 	var player = get_tree().get_first_node_in_group("player")
-	enter_chase_state(player)
+	_enter_chase_state(player)
 
 
-func enter_chase_state(target: Node3D) -> void:
+func _enter_chase_state(target: Node3D) -> void:
 	if navigation_component.target == null:
 		navigation_component.target = target
 		fsm_component.transition("BadguyChaseState")
@@ -69,7 +69,7 @@ func _on_body_entered_attack_area(body: Node3D) -> void:
 
 func _on_body_entered_detection_area(body: Node3D) -> void:
 	if body.is_in_group("player"):
-		enter_chase_state(body)
+		_enter_chase_state(body)
 
 
 func _on_body_exited_detection_area(body: Node3D) -> void:
