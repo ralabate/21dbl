@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dq0usfrqgg3dm" path="res://badguys/images/energy-alien/energy-alien-attack-0.png" id="3_nvatm"]
 [ext_resource type="Texture2D" uid="uid://cl0jur7fhtqc7" path="res://badguys/images/energy-alien/energy-alien-attack-1.png" id="4_blnm1"]
 [ext_resource type="Texture2D" uid="uid://cv4nbqb6fhiq2" path="res://badguys/images/energy-alien/energy-alien-attack-2.png" id="5_5whpb"]
-[ext_resource type="PackedScene" uid="uid://ccha1k3c1jk0d" path="res://badguys/bullet/badguy_bullet.tscn" id="5_l7rji"]
+[ext_resource type="PackedScene" uid="uid://ccha1k3c1jk0d" path="res://badguys/projectiles/badguy_projectile.tscn" id="5_l7rji"]
 [ext_resource type="Texture2D" uid="uid://cgieinlfmu42l" path="res://badguys/images/energy-alien/energy-alien-attack-3.png" id="6_8cxud"]
 [ext_resource type="Texture2D" uid="uid://c75aa4etba1x8" path="res://badguys/images/energy-alien/energy-alien-walk-0.png" id="6_i3k53"]
 [ext_resource type="Texture2D" uid="uid://w5oydjqgxs43" path="res://badguys/images/energy-alien/energy-alien-walk-1.png" id="7_6rxn4"]
