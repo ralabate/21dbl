@@ -51,7 +51,6 @@ func _physics_process(delta):
 
 
 func trigger() -> void:
-	# HACK: Let's find another way to do this...
 	var player = get_tree().get_first_node_in_group("player")
 	enter_chase_state(player)
 
@@ -79,7 +78,6 @@ func _on_body_exited_detection_area(body: Node3D) -> void:
 
 
 func _on_damage_received(amount: int) -> void:
-	# HACK: For now...
 	if health_component.current_health > 0:
 		fsm_component.transition("BadguyHurtState")
 
