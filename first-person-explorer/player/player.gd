@@ -23,6 +23,8 @@ var headbob_timer = 0.0
 
 
 func _ready() -> void:
+	add_to_group("player")
+
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 	health_component.damage_received.connect(_on_damage_received)
