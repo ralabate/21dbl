@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://r0agos3dx780"]
+[gd_scene load_steps=14 format=3 uid="uid://r0agos3dx780"]
 
 [ext_resource type="Script" uid="uid://docgf5x4voevf" path="res://player/player.gd" id="1_s7qer"]
 [ext_resource type="Script" uid="uid://bund4vdf4u4yo" path="res://common/components/health_component.gd" id="2_g4c7l"]
@@ -10,71 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://clj2kgl355ryn" path="res://player/weapons/mine_bullet.tscn" id="8_b8hi5"]
 [ext_resource type="PackedScene" uid="uid://bjdsn54t3kwwb" path="res://player/weapons/lightning_bullet.tscn" id="9_2uvqg"]
 [ext_resource type="Script" uid="uid://bpdw05fio7u8e" path="res://common/components/key_inventory_component.gd" id="10_1s1yo"]
-[ext_resource type="Texture2D" uid="uid://cauwxvdjywmub" path="res://player/weapons/images/hand_slap.0001.png" id="11_5ejfk"]
-[ext_resource type="Texture2D" uid="uid://d3fjfa3au7002" path="res://player/weapons/images/hand_slap.0002.png" id="12_jd2rm"]
-[ext_resource type="Texture2D" uid="uid://ypplchc2cg2t" path="res://player/weapons/images/hand_slap.0003.png" id="13_q28gw"]
-[ext_resource type="Texture2D" uid="uid://c65a14v7j7okc" path="res://player/weapons/images/hand_slap.0004.png" id="14_ge24q"]
-[ext_resource type="Texture2D" uid="uid://7ytuf20stf33" path="res://player/weapons/images/hand_slap.0005.png" id="15_pnw6m"]
-[ext_resource type="Texture2D" uid="uid://dxaswyxov1yrp" path="res://player/weapons/images/hand_slap.0006.png" id="16_1so5t"]
-[ext_resource type="Texture2D" uid="uid://bevq8qmn75e0c" path="res://player/weapons/images/hand_slap.0007.png" id="17_55jnj"]
-[ext_resource type="Texture2D" uid="uid://drg0hy3t57kno" path="res://player/weapons/images/hand_slap.0008.png" id="18_dx5ib"]
-[ext_resource type="Texture2D" uid="uid://c4c45sal8nsmp" path="res://player/weapons/images/hand_slap.0009.png" id="19_a2xo5"]
-[ext_resource type="Texture2D" uid="uid://djbfukjn4h0rr" path="res://player/weapons/images/hand_slap.0010.png" id="20_art4l"]
-[ext_resource type="Texture2D" uid="uid://bnhb7cx23h67x" path="res://level/images/keys/red-keycard.png" id="21_fjxoa"]
-[ext_resource type="Texture2D" uid="uid://c6citgotws0lu" path="res://level/images/keys/yellow-keycard.png" id="22_gswnw"]
-[ext_resource type="Texture2D" uid="uid://yeh7i38cnpbr" path="res://level/images/keys/blue-keycard.png" id="23_xcnuv"]
+[ext_resource type="PackedScene" uid="uid://bst5vkdgn78gb" path="res://player/ui/hud.tscn" id="11_2ieo8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_21lqr"]
 height = 1.8
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vtoyx"]
 points = PackedVector3Array(0, 0, 0, -5, 0, -100, 5, 0, -100, -5, 50, -100, 5, 50, -100)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dprww"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_5ejfk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_jd2rm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_q28gw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_ge24q")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_pnw6m")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_1so5t")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_55jnj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_dx5ib")
-}, {
-"duration": 1.0,
-"texture": ExtResource("19_a2xo5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_art4l")
-}],
-"loop": false,
-"name": &"fire",
-"speed": 15.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_5ejfk")
-}],
-"loop": false,
-"name": &"idle",
-"speed": 5.0
-}]
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 2
@@ -128,98 +70,5 @@ collision_mask = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AutoAimRegion"]
 shape = SubResource("ConvexPolygonShape3D_vtoyx")
 
-[node name="HUD" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HurtFlashRect" type="ColorRect" parent="HUD"]
+[node name="HUD" parent="." instance=ExtResource("11_2ieo8")]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0, 0, 1)
-
-[node name="WeaponSprite" type="AnimatedSprite2D" parent="HUD"]
-unique_name_in_owner = true
-texture_filter = 1
-position = Vector2(640, 464)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_dprww")
-animation = &"fire"
-frame = 9
-frame_progress = 1.0
-
-[node name="HealthBar" type="ProgressBar" parent="HUD"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -44.0
-offset_right = 308.0
-offset_bottom = -17.0
-grow_vertical = 0
-max_value = 1.0
-
-[node name="KeyInventoryContainer" type="HBoxContainer" parent="HUD"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -219.0
-offset_top = -80.0
-offset_right = -27.0
-offset_bottom = -16.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="RedKeyIcon" type="TextureRect" parent="HUD/KeyInventoryContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("21_fjxoa")
-
-[node name="YellowKeyIcon" type="TextureRect" parent="HUD/KeyInventoryContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("22_gswnw")
-
-[node name="BlueKeyIcon" type="TextureRect" parent="HUD/KeyInventoryContainer"]
-texture_filter = 1
-layout_mode = 2
-size_flags_horizontal = 3
-texture = ExtResource("23_xcnuv")
-
-[node name="AbilityLabel" type="Label" parent="HUD"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 23.0
-grow_horizontal = 2
-
-[node name="AmmoLabel" type="Label" parent="HUD"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -512.0
-offset_top = -24.0
-offset_right = -439.0
-offset_bottom = -1.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "1,000,000"

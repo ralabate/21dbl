@@ -15,12 +15,7 @@ extends CharacterBody3D
 @onready var key_inventory_component: KeyInventoryComponent = %KeyInventoryComponent
 @onready var uni_ammo_component: UniversalAmmoComponent = %UniversalAmmoComponent
 @onready var camera: Camera3D = %Camera3D
-
-# TODO: Move UI stuff out of here.
-@onready var weapon_sprite: AnimatedSprite2D = %WeaponSprite
-@onready var hurt_flash: ColorRect = %HurtFlashRect
-@onready var health_bar: ProgressBar = %HealthBar
-@onready var key_inventory_container: HBoxContainer = %KeyInventoryContainer
+@onready var hud = %HUD
 
 var _is_sprinting = false
 var default_camera_pos: Vector3
@@ -41,18 +36,10 @@ func _ready() -> void:
 	trigger_fire_component.ammo_requested.connect(_on_ammo_requested)
 	trigger_fire_component.can_fire = true
 	trigger_fire_component.ability_template = ability_inventory.get_current_ability()
-	
+
 	default_camera_pos = camera.position
-
-	# TODO: Move UI stuff out of here.
-	hurt_flash.visible = false
-	weapon_sprite.play("idle")
-	update_health_bar_value()
-	for key_icon in key_inventory_container.get_children():
-		key_icon.visible = false
-
-	$HUD/AbilityLabel.text = trigger_fire_component.ability_template.resource_path
-	$HUD/AmmoLabel.text = str(uni_ammo_component.amount)
+	hud.set_ability_text(trigger_fire_component.ability_template.resource_path)
+	hud.set_ammo(uni_ammo_component.amount)
 
 
 func _input(event: InputEvent) -> void:
@@ -96,15 +83,10 @@ func _physics_process(delta: float) -> void:
 		camera.position = default_camera_pos
 
 
-func update_health_bar_value() -> void:
-	health_bar.value = float(health_component.current_health) / health_component.MAX_HEALTH
-
-
 func _on_damage_received(amount: int) -> void:
-	hurt_flash.visible = true
-	await get_tree().create_timer(0.1).timeout
-	hurt_flash.visible = false
-	update_health_bar_value()
+	var health = float(health_component.current_health) / health_component.MAX_HEALTH
+	hud.set_health_bar_value(health)
+	hud.trigger_hurt_flash()
 
 
 func _on_death() -> void:
@@ -112,10 +94,8 @@ func _on_death() -> void:
 
 
 func _on_weapon_fired() -> void:
-	weapon_sprite.play("fire")
 	trigger_fire_component.can_fire = false
-	await weapon_sprite.animation_finished
-	weapon_sprite.play("idle")
+	await hud.trigger_weapon_animation()
 	trigger_fire_component.can_fire = true
 
 
@@ -127,24 +107,13 @@ func _on_ammo_requested() -> void:
 
 
 func _on_ammo_amount_changed(new_amount: int) -> void:
-	$HUD/AmmoLabel.text = str(new_amount)
+	hud.set_ammo(new_amount)
 
 
 func _on_ability_selected(scene: PackedScene) -> void:
 	trigger_fire_component.ability_template = scene
-	$HUD/AbilityLabel.text = trigger_fire_component.ability_template.resource_path
+	hud.set_ability_text(trigger_fire_component.ability_template.resource_path)
 
 
 func _on_key_acquired(key: DoorKey.Type) -> void:
-	var node_name: String
-	match key:
-		DoorKey.Type.RED:
-			node_name = "RedKeyIcon"
-		DoorKey.Type.YELLOW:
-			node_name = "YellowKeyIcon"
-		DoorKey.Type.BLUE:
-			node_name = "BlueKeyIcon"
-			
-	var key_icon = key_inventory_container.get_node(node_name)
-	if key_icon:
-		key_icon.visible = true
+	hud.set_key(key)
