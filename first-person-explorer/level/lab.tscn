@@ -4323,8 +4323,9 @@ node_list = [NodePath("../../Doors/TrapDoor"), NodePath("../../Badguys/Eyeball")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05, 0, 11.75)
 shape = SubResource("BoxShape3D_f1iti")
 
-[node name="NodeTriggerArea3" parent="Triggers" instance=ExtResource("11_3ypoi")]
+[node name="NodeTriggerArea3" parent="Triggers" node_paths=PackedStringArray("node_list") instance=ExtResource("11_3ypoi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 2, 11)
+node_list = [NodePath("../../Badguys/Slime5"), NodePath("../../Badguys/Slime6"), NodePath("../../Badguys/Slime8"), NodePath("../../Badguys/Slime9"), NodePath("../../Badguys/Eyeball5"), NodePath("../../Badguys/Eyeball6")]
 
 [node name="CollisionShape3D" parent="Triggers/NodeTriggerArea3" index="0"]
 shape = SubResource("BoxShape3D_y0yan")
