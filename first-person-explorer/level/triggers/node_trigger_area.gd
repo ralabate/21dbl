@@ -64,6 +64,6 @@ func _on_body_entered(body: Node3D) -> void:
 		for node in node_list:
 			if node == null or node.is_queued_for_deletion():
 				continue
-			if node.has_method("wake"):
-				node.wake()
+			if node.is_in_group("triggerable") and node.has_method("trigger"):
+				node.trigger()
 			_triggered = true

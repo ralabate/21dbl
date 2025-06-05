@@ -26,7 +26,7 @@ func _ready() -> void:
 	update_door_color()
 
 
-func wake() -> void:
+func trigger() -> void:
 	open()
 
 

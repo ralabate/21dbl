@@ -22,6 +22,7 @@ var movement_direction: Vector3
 
 func _ready():
 	add_to_group("badguys")
+	add_to_group("triggerable")
 
 	player_damage_area.body_entered.connect(_on_body_entered_attack_area)
 	
@@ -49,7 +50,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func wake() -> void:
+func trigger() -> void:
 	# HACK: Let's find another way to do this...
 	var player = get_tree().get_first_node_in_group("player")
 	enter_chase_state(player)
