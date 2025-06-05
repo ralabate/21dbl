@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/player.tscn" id="10_yoht1"]
 [ext_resource type="PackedScene" uid="uid://dmpfbiv6a0bm" path="res://level/interactive/door.tscn" id="11_vv22s"]
 [ext_resource type="PackedScene" uid="uid://canar5qot5j80" path="res://level/interactive/trap_door.tscn" id="12_v8u3g"]
-[ext_resource type="PackedScene" uid="uid://17qm3tooj34w" path="res://level/triggers/badguy_trigger_area.tscn" id="13_s0k45"]
+[ext_resource type="PackedScene" uid="uid://17qm3tooj34w" path="res://level/triggers/node_trigger_area.tscn" id="13_s0k45"]
 [ext_resource type="PackedScene" uid="uid://bgvnnk8ambbxi" path="res://badguys/slime.tscn" id="14_fq5lv"]
 [ext_resource type="PackedScene" uid="uid://c1u857uxt74dr" path="res://badguys/eyeball.tscn" id="15_kk6fh"]
 
