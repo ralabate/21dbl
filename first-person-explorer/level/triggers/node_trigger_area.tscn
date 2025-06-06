@@ -7,6 +7,7 @@
 [node name="NodeTriggerArea" type="Area3D"]
 collision_mask = 6
 script = ExtResource("1_37fxo")
+ingame_debug_info = null
 door_line_color = Color(1, 1, 0, 1)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

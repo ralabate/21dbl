@@ -7,27 +7,40 @@ extends Area3D
 		node_list = new_list
 		build_meshes()
 
-@export var draw_lines_ingame = false
+@export var ingame_debug_info = false
 @export var default_line_color = Color.MAGENTA
 @export var badguy_line_color = Color.RED
 @export var door_line_color = Color.AQUAMARINE
 
 var mesh_instances: Array[MeshInstance3D]
 var _triggered = false
-var line_material = StandardMaterial3D.new()
+var line_material: StandardMaterial3D
+var debug_label: Label3D
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
-	line_material.vertex_color_use_as_albedo = true
-	build_meshes()
+	if ingame_debug_info or Engine.is_editor_hint():
+		build_meshes()
+		line_material = StandardMaterial3D.new()
+		line_material.vertex_color_use_as_albedo = true
+
+		debug_label = Label3D.new()
+		debug_label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		debug_label.pixel_size = 0.001
+		debug_label.fixed_size = true
+		debug_label.no_depth_test = true
+		add_child(debug_label)
 
 
 func _process(delta: float) -> void:
-	if draw_lines_ingame or Engine.is_editor_hint():
+	if ingame_debug_info or Engine.is_editor_hint():
 		draw_all_lines()
+
+		# This can be null if in editor, but not as a subscene.
+		if debug_label:
+			debug_label.text = self.name
 
 
 func draw_all_lines() -> void:
