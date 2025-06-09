@@ -4,7 +4,8 @@ extends CharacterBody3D
 @export var speed = 250
 @export var sprint_speed = 500
 @export var jump_velocity = 4.5
-@export var head_turning_rate = 0.1
+@export var mouse_turning_rate = 0.1
+@export var keyboard_turning_rate = 2.0
 @export var headbob_speed = 1.0
 @export var headbob_amount = 0.05
 @export var headbob_frequency = 10.0
@@ -47,21 +48,19 @@ func _ready() -> void:
 	hud.set_ammo(uni_ammo_component.amount)
 
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE else Input.MOUSE_MODE_VISIBLE
-	elif event is InputEventMouseMotion:
-		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
-			rotate_y(-deg_to_rad(event.screen_relative.x * head_turning_rate))
-			trigger_fire_component.direction = global_transform.basis.z
 
 
 func _physics_process(delta: float) -> void:
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
+
+	if Input.is_action_pressed("turn_left"):
+		rotate_y(deg_to_rad(keyboard_turning_rate))
+	elif Input.is_action_pressed("turn_right"):
+		rotate_y(-deg_to_rad(keyboard_turning_rate))
 
 	var input_dir := Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_backward")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -73,6 +72,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = 0
 		velocity.z = 0
+
+	if not is_on_floor():
+		velocity += get_gravity() * delta
 
 	move_and_slide()
 
@@ -86,6 +88,13 @@ func _physics_process(delta: float) -> void:
 	else:
 		headbob_timer = 0.0
 		camera.position = default_camera_pos
+
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseMotion:
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			rotate_y(-deg_to_rad(event.screen_relative.x * mouse_turning_rate))
+			trigger_fire_component.direction = global_transform.basis.z
 
 
 func _on_damage_received(amount: int) -> void:
