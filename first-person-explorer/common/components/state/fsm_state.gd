@@ -15,7 +15,7 @@ func exit() -> void:
 	active = false
 
 
-func update(delta: float) -> void:
+func update(_delta: float) -> void:
 	pass
 
 

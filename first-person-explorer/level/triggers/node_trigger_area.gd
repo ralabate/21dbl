@@ -34,7 +34,7 @@ func _ready() -> void:
 		add_child(debug_label)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if ingame_debug_info or Engine.is_editor_hint():
 		draw_all_lines()
 

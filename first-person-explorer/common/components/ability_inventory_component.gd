@@ -1,7 +1,6 @@
 class_name AbilityInventory extends Node
 
 
-signal node_instantiated(node: Node3D, location: Vector3, direction: Vector3)
 signal selected_ability(scene: PackedScene)
 
 
@@ -16,7 +15,7 @@ func _ready() -> void:
 	InstantiationStation.register_instantiator(self)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var previous = _current_ability
 	if Input.is_action_just_pressed("ability_1"):
 		_current_ability = 0

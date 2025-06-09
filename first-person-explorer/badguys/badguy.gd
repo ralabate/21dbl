@@ -86,7 +86,7 @@ func _on_body_exited_detection_area(body: Node3D) -> void:
 		fsm_component.transition("BadguyIdleState")
 
 
-func _on_damage_received(amount: int) -> void:
+func _on_damage_received(_amount: int) -> void:
 	if health_component.current_health > 0:
 		fsm_component.transition("BadguyHurtState")
 
@@ -95,7 +95,7 @@ func _on_death() -> void:
 	fsm_component.transition("BadguyDeathState")
 
 
-func _on_navigation_started(target: Node3D) -> void:
+func _on_navigation_started(_target: Node3D) -> void:
 	is_moving = true
 
 
@@ -104,8 +104,8 @@ func _on_navigation_stopped() -> void:
 	velocity = Vector3.ZERO
 
 
-func _on_navigation_position(position: Vector3) -> void:
-	movement_direction = global_position.direction_to(position)
+func _on_navigation_position(location: Vector3) -> void:
+	movement_direction = global_position.direction_to(location)
 
 
 func _on_fsm_transitioned_state(to: String) -> void:

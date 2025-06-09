@@ -19,7 +19,6 @@ extends CharacterBody3D
 @onready var camera: Camera3D = %Camera3D
 @onready var hud = %HUD
 
-var _is_sprinting = false
 var default_camera_pos: Vector3
 var headbob_timer = 0.0
 
@@ -48,7 +47,7 @@ func _ready() -> void:
 	hud.set_ammo(uni_ammo_component.amount)
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED if Input.mouse_mode == Input.MOUSE_MODE_VISIBLE else Input.MOUSE_MODE_VISIBLE
 
@@ -97,7 +96,7 @@ func _input(event: InputEvent) -> void:
 			trigger_fire_component.direction = global_transform.basis.z
 
 
-func _on_damage_received(amount: int) -> void:
+func _on_damage_received(_amount: int) -> void:
 	var health = float(health_component.current_health) / health_component.MAX_HEALTH
 	hud.set_health_bar_value(health)
 	hud.trigger_hurt_flash()

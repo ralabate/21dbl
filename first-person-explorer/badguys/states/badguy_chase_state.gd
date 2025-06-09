@@ -16,7 +16,7 @@ func exit() -> void:
 	navigation_component.stop_navigation()
 
 
-func update(delta: float) -> void:
+func update(_delta: float) -> void:
 	if navigation_component.distance_to_target() <= attack_distance:
 		transition("BadguyAttackState")
 	else:

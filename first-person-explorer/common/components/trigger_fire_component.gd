@@ -22,7 +22,7 @@ func _ready() -> void:
 	InstantiationStation.register_instantiator(self)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if can_fire:
 		if Input.is_action_pressed("fire_projectile"):
 			spawn(projectile_template)
@@ -51,7 +51,7 @@ func spawn(template: PackedScene) -> void:
 
 func get_autoaim_direction(projectile_origin: Vector3) -> Vector3:
 	var shortest_distance = 1000.0
-	var direction = get_parent().basis.z
+	var autoaim_direction = get_parent().basis.z
 
 	for overlapping in autoaim_region.get_overlapping_bodies():
 		# TODO: We shouldn't be checking specific groups here.
@@ -60,8 +60,8 @@ func get_autoaim_direction(projectile_origin: Vector3) -> Vector3:
 			var distance = projectile_origin.distance_to(overlapping.global_position)
 			if distance < shortest_distance:
 				# HACK: WHY DOES THIS HAVE TO BE NEGATIVE???
-				direction = -projectile_origin.direction_to(overlapping.global_position)
+				autoaim_direction = -projectile_origin.direction_to(overlapping.global_position)
 				shortest_distance = distance
-				Log.info("Closest direction: [%s]" % direction)
+				Log.info("Closest direction: [%s]" % autoaim_direction)
 
-	return direction
+	return autoaim_direction

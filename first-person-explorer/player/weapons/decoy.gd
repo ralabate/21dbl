@@ -1,8 +1,6 @@
 extends Area3D
 
 
-signal done(affected_list: Array[Node3D])
-
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 var badguy_list: Array[Badguy] = []
