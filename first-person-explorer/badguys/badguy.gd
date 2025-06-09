@@ -63,6 +63,7 @@ func hear_sound_at(location: Vector3) -> void:
 	if not result.is_empty() and result.collider.is_in_group("player"):
 		trigger()
 
+
 func _enter_chase_state(target: Node3D) -> void:
 	if navigation_component.target == null:
 		navigation_component.target = target

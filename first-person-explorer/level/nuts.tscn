@@ -76,11 +76,98 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8, 0, -12.6)
 [node name="Slime7" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3, 0, -5.4)
 
+[node name="Slime73" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.6, 0, -5.4)
+
+[node name="Slime74" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.2, 0, -1.9)
+
+[node name="Slime44" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.9, 0, -9.1)
+
+[node name="Slime45" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, -18.5)
+
+[node name="Slime46" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2359, 0, -16.9337)
+
+[node name="Slime47" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9359, 0, -15.3337)
+
+[node name="Slime48" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.2359, 0, -4.43368)
+
+[node name="Slime49" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36413, 0, -7.53368)
+
+[node name="Slime50" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.835866, 0, -17.3337)
+
+[node name="Slime51" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.13587, 0, -25.0337)
+
+[node name="Slime52" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26413, 0, -27.7337)
+
+[node name="Slime53" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2641, 0, -27.0337)
+
+[node name="Slime54" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.0641, 0, -23.3337)
+
+[node name="Slime55" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0641, 0, -18.5337)
+
+[node name="Slime56" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4641, 0, -13.9337)
+
+[node name="Slime57" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4641, 0, -3.53368)
+
+[node name="Slime58" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0641, 0, -3.23368)
+
+[node name="Slime59" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9641, 0, -10.4337)
+
+[node name="Slime60" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.5641, 0, -21.7337)
+
+[node name="Slime61" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.76413, 0, -27.6337)
+
+[node name="Slime62" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.53587, 0, -29.3337)
+
+[node name="Slime63" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.7359, 0, -27.7337)
+
+[node name="Slime64" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.3359, 0, -27.1337)
+
+[node name="Slime65" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5359, 0, -23.3337)
+
+[node name="Slime66" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.3359, 0, 1.06631)
+
+[node name="Slime67" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9641, 0, 25.9663)
+
+[node name="Slime68" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4641, 0, -26.2337)
+
+[node name="Slime69" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.4641, 0, -26.2337)
+
 [node name="Slime8" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3, 0, -10.8)
 
 [node name="Slime9" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4, 0, -21.1)
+
+[node name="Slime75" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 0, -20.8)
 
 [node name="Slime10" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6, 0, -22.7)
@@ -99,6 +186,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9, 0, -16.7)
 
 [node name="Slime15" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 0, -10.9)
+
+[node name="Slime70" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -17)
+
+[node name="Slime71" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7, 0, -15.5)
+
+[node name="Slime72" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.4, 0, -11.4)
 
 [node name="Slime16" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -6.4)
@@ -120,6 +216,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14)
 
 [node name="Slime22" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7, 0, 13.1)
+
+[node name="Slime35" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2, 0, 13.6)
 
 [node name="Slime23" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 0, 17.2)
@@ -143,7 +242,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9, 0, 5.6)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 0, 6.8)
 
 [node name="Slime30" parent="Badguys" instance=ExtResource("2_y5ms7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8, 0, 8.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.3, 0, 8.7)
 
 [node name="Slime31" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3, 0, 13.1)
@@ -156,6 +255,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.4, 0, 23.4)
 
 [node name="Slime34" parent="Badguys" instance=ExtResource("2_y5ms7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2, 0, 19.9)
+
+[node name="Slime36" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.8, 0, 24.5)
+
+[node name="Slime37" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8, 0, 27.1)
+
+[node name="Slime38" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.8, 0, 27.4)
+
+[node name="Slime39" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.4, 0, 13.1)
+
+[node name="Slime40" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.899999, 0, 19.9)
+
+[node name="Slime41" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4, 0, 3.7)
+
+[node name="Slime42" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0, 11.6)
+
+[node name="Slime43" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.600001, 0, 4.9)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 6.5, 0)
