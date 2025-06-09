@@ -1,0 +1,163 @@
+[gd_scene load_steps=8 format=3 uid="uid://1wyoqvt5x8nq"]
+
+[ext_resource type="PackedScene" uid="uid://r0agos3dx780" path="res://player/player.tscn" id="1_2iq6o"]
+[ext_resource type="PackedScene" uid="uid://bgvnnk8ambbxi" path="res://badguys/slime.tscn" id="2_y5ms7"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_s65ib"]
+vertices = PackedVector3Array(-31.4, -0.5, -31.25, -31.4, -0.5, 31.25, 31.35, -0.5, 31.25, 31.35, -0.5, -31.25)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_height = 0.5
+agent_height = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y5ms7"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2iq6o"]
+material = SubResource("StandardMaterial3D_y5ms7")
+size = Vector3(5, 5, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_slx5f"]
+size = Vector3(5, 5, 30)
+
+[sub_resource type="Environment" id="Environment_w72v2"]
+ambient_light_source = 2
+
+[node name="Level0" type="Node3D"]
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+navigation_mesh = SubResource("NavigationMesh_s65ib")
+metadata/_edit_lock_ = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="NavigationRegion3D"]
+use_collision = true
+metadata/_edit_lock_ = true
+
+[node name="OriginRoom" type="CSGBox3D" parent="NavigationRegion3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.150002, 3.5, 0)
+flip_faces = true
+size = Vector3(64, 10, 64)
+metadata/_edit_lock_ = true
+
+[node name="Node3D" type="StaticBody3D" parent="NavigationRegion3D/CSGCombiner3D/OriginRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, 17)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/CSGCombiner3D/OriginRoom/Node3D"]
+mesh = SubResource("BoxMesh_2iq6o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/CSGCombiner3D/OriginRoom/Node3D"]
+shape = SubResource("BoxShape3D_slx5f")
+
+[node name="FirstPersonController" parent="." instance=ExtResource("1_2iq6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 12.5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_w72v2")
+
+[node name="Badguys" type="Node" parent="."]
+
+[node name="Slime" parent="Badguys" instance=ExtResource("2_y5ms7")]
+
+[node name="Slime2" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8, 0, -3.9)
+
+[node name="Slime3" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6, 0, -5.9)
+
+[node name="Slime4" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 0, -12.7)
+
+[node name="Slime5" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, -14.1)
+
+[node name="Slime6" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.8, 0, -12.6)
+
+[node name="Slime7" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3, 0, -5.4)
+
+[node name="Slime8" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3, 0, -10.8)
+
+[node name="Slime9" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.4, 0, -21.1)
+
+[node name="Slime10" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6, 0, -22.7)
+
+[node name="Slime11" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 0, -24.2)
+
+[node name="Slime12" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 0, -23.2)
+
+[node name="Slime13" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4, 0, -21.2)
+
+[node name="Slime14" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.9, 0, -16.7)
+
+[node name="Slime15" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9, 0, -10.9)
+
+[node name="Slime16" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -6.4)
+
+[node name="Slime17" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6, 0, -9.9)
+
+[node name="Slime18" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9, 0, 0.900002)
+
+[node name="Slime19" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1, 0, 19.2)
+
+[node name="Slime20" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.2, 0, 24.8)
+
+[node name="Slime21" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14)
+
+[node name="Slime22" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7, 0, 13.1)
+
+[node name="Slime23" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4, 0, 17.2)
+
+[node name="Slime24" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9, 0, 24.4)
+
+[node name="Slime25" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9, 0, 19)
+
+[node name="Slime26" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 8.7)
+
+[node name="Slime27" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2, 0, 7.1)
+
+[node name="Slime28" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9, 0, 5.6)
+
+[node name="Slime29" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5, 0, 6.8)
+
+[node name="Slime30" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.8, 0, 8.6)
+
+[node name="Slime31" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.3, 0, 13.1)
+
+[node name="Slime32" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3, 0, 18.9)
+
+[node name="Slime33" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.4, 0, 23.4)
+
+[node name="Slime34" parent="Badguys" instance=ExtResource("2_y5ms7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.2, 0, 19.9)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 6.5, 0)
+
+[editable path="FirstPersonController"]

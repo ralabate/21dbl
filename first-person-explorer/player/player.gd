@@ -14,6 +14,7 @@ extends CharacterBody3D
 @onready var ability_inventory: AbilityInventory = %AbilityInventory
 @onready var key_inventory_component: KeyInventoryComponent = %KeyInventoryComponent
 @onready var uni_ammo_component: UniversalAmmoComponent = %UniversalAmmoComponent
+@onready var audio_alert_region: Area3D = %AudioAlertRegion
 @onready var camera: Camera3D = %Camera3D
 @onready var hud = %HUD
 
@@ -74,7 +75,7 @@ func _physics_process(delta: float) -> void:
 		velocity.z = 0
 
 	move_and_slide()
-	
+
 	if velocity.length() > 0.1:
 		headbob_timer += delta * headbob_frequency
 		camera.position = default_camera_pos + Vector3(
@@ -98,6 +99,10 @@ func _on_death() -> void:
 
 
 func _on_weapon_fired() -> void:
+	for body in audio_alert_region.get_overlapping_bodies():
+		if body.is_in_group("badguys"):
+			body.hear_sound_at(global_position)
+
 	trigger_fire_component.can_fire = false
 	await hud.trigger_weapon_animation()
 	trigger_fire_component.can_fire = true

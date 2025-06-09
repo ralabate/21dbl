@@ -54,6 +54,7 @@ func get_autoaim_direction(projectile_origin: Vector3) -> Vector3:
 	var direction = get_parent().basis.z
 
 	for overlapping in autoaim_region.get_overlapping_bodies():
+		# TODO: We shouldn't be checking specific groups here.
 		if overlapping.is_in_group("badguys"):
 			Log.info("Overlapping: [%s]" % overlapping.name)
 			var distance = projectile_origin.distance_to(overlapping.global_position)

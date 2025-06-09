@@ -54,6 +54,15 @@ func trigger() -> void:
 	_enter_chase_state(player)
 
 
+func hear_sound_at(location: Vector3) -> void:
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(global_position, location)
+	query.exclude = [self]
+	var result = space_state.intersect_ray(query)
+	
+	if not result.is_empty() and result.collider.is_in_group("player"):
+		trigger()
+
 func _enter_chase_state(target: Node3D) -> void:
 	if navigation_component.target == null:
 		navigation_component.target = target
