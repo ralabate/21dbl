@@ -6,6 +6,10 @@ class_name BadguyChaseState
 @export var attack_distance: float
 
 
+func _ready() -> void:
+	assert(navigation_component != null, "Add a navigation component!")
+
+
 func enter() -> void:
 	super.enter()
 	navigation_component.start_navigation()

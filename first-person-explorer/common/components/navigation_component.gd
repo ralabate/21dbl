@@ -11,6 +11,10 @@ signal next_position(position: Vector3)
 var target: Node3D
 
 
+func _ready() -> void:
+	assert(navigation_agent != null, "Add a NavigationAgent3D node!")
+
+
 func start_navigation() -> void:
 	Log.info("[%s] Starting navigation to target: [%s]" %
 		[get_parent().name, target])
